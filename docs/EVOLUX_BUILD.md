@@ -15,13 +15,13 @@ O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa 
 | Tipo de chave | RSA 2048 de desenvolvimento |
 | Alias | `evolux` |
 | APK | `dist/evolux-7.0-dev.apk` |
-| SHA-256 | `bc3925525c2669dc9de4ce3c3ee4bbc403c00f37906c6cefd23d5d18b6528ba1` |
+| SHA-256 | `d03e49256e20b59ef67e0e3bc7b6fa4cf2872abf95daef308d6e5b26707f400a` |
 | Package | `com.nathnetwork.xciptv` |
 | Nome exibido | `Evolux` |
 
-A keystore de desenvolvimento **não é versionada**. O APK foi validado por teste de integridade ZIP e por nova decodificação do manifesto e dos recursos, confirmando `app_name=Evolux` e a presença das variantes de ícone.
+A keystore de desenvolvimento **não é versionada**. O APK foi validado por teste de integridade ZIP e assinatura v1/v2/v3. A build final inclui as sete bibliotecas nativas `arm64-v8a`, incluindo `libnative-lib.so`, `libffmpeg.so`, `libffmpegJNI.so`, `libvlc.so`, `libvlcjni.so`, `libavresample.so` e `libc++_shared.so`. Também foi confirmada a presença de `app_name=Evolux` e das variantes de ícone.
 
-> Esta é uma build de teste derivada de código decompilado. Ela não foi executada em um dispositivo ou emulador nesta sessão; portanto, a validação funcional em runtime ainda é necessária.
+> Esta é uma build de teste derivada de código decompilado. O erro reportado de `libnative-lib.so` foi corrigido na embalagem arm64, mas a aplicação ainda não foi executada novamente em um dispositivo ou emulador nesta sessão; a validação funcional em runtime continua necessária.
 
 ## Instalação
 

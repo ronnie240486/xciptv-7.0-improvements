@@ -55,3 +55,7 @@ A sequência técnica mais segura é: primeiro tornar a base compilável; depois
 ## Build Evolux de teste
 
 A build `dist/evolux-7.0-dev.apk` aplica o nome exibido **Evolux** e o novo logo. O package interno permanece `com.nathnetwork.xciptv` nesta primeira etapa para preservar referências da base recuperada. Consulte `docs/EVOLUX_BUILD.md` para o SHA-256, a assinatura de desenvolvimento e as limitações de instalação.
+
+## Correção da build nativa
+
+A build atual em `dist/evolux-7.0-dev.apk` inclui as bibliotecas nativas arm64 recuperadas do split original, incluindo `libnative-lib.so`. Consulte `docs/EVOLUX_BUILD.md` para o novo hash e a validação da assinatura.
