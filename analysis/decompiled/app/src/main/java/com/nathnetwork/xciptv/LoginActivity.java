@@ -419,7 +419,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
             this.f20396z = u7;
             f20336H0.setText(Encrypt.a(u7.f26696e));
             f20337I0.setText(Encrypt.a(this.f20396z.f26694c));
-            if (!this.f20339A.getString("login_type", null).equals("activationXOR")) {
+            if (!"activationXOR".equals(this.f20339A.getString("login_type", null))) {
                 f20338J0.setText(Encrypt.a(this.f20396z.f26695d));
             } else if (this.f20339A.contains("xco_activation_cod")) {
                 f20338J0.setText(Encrypt.a(this.f20339A.getString("xco_activation_cod", null)));
@@ -957,7 +957,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
         this.f20380l0 = (TextView) findViewById(R.id.txt_panel_selected_desc);
         this.f20382n0 = (ImageButton) findViewById(R.id.btn_show_password);
         String str = Config.f21195b;
-        if (str.equals("no")) {
+        if ("no".equals(str)) {
             this.f20360R.setVisibility(8);
             LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.f20360R.getLayoutParams();
             layoutParams.height = 1;
@@ -995,7 +995,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
         layoutParams2.height = i12;
         layoutParams2.width = i12;
         this.f20382n0.setLayoutParams(layoutParams2);
-        if (this.f20339A.getString("login_type", null).equals("activationXOR")) {
+        if ("activationXOR".equals(this.f20339A.getString("login_type", null))) {
             this.f20382n0.setVisibility(8);
         }
         this.f20382n0.setOnClickListener(new View.OnClickListener(this) { // from class: j5.N
@@ -1027,9 +1027,9 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
                             break;
                         }
                     case 1:
-                        if (loginActivity2.f20339A.getString("login_type", null).equals("activation")) {
+                        if ("activation".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             LoginActivity.f20337I0.setText(LoginActivity.f20338J0.getText().toString());
-                        } else if (loginActivity2.f20339A.getString("login_type", null).equals("mac")) {
+                        } else if ("mac".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             LoginActivity.f20337I0.setText(loginActivity2.f20339A.getString("mac", null));
                             LoginActivity.f20338J0.setText(loginActivity2.f20339A.getString("mac", null));
                         }
@@ -1037,7 +1037,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
                         if (!Methods.T(loginActivity3)) {
                             Methods.o(loginActivity3, loginActivity2.getString(R.string.please_check_internet_connection));
                             break;
-                        } else if (!loginActivity2.f20339A.getString("login_type", null).equals("activationXOR")) {
+                        } else if (!"activationXOR".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             String str3 = Config.f21195b;
                             if (!str3.equals("yes") || !AbstractC1027eH.y(LoginActivity.f20336H0)) {
                                 if (android.support.v4.media.a.y("ORT_WHICH_PANEL", "xtreamcodes", "m3u")) {
@@ -1172,9 +1172,9 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
                             break;
                         }
                     case 1:
-                        if (loginActivity2.f20339A.getString("login_type", null).equals("activation")) {
+                        if ("activation".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             LoginActivity.f20337I0.setText(LoginActivity.f20338J0.getText().toString());
-                        } else if (loginActivity2.f20339A.getString("login_type", null).equals("mac")) {
+                        } else if ("mac".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             LoginActivity.f20337I0.setText(loginActivity2.f20339A.getString("mac", null));
                             LoginActivity.f20338J0.setText(loginActivity2.f20339A.getString("mac", null));
                         }
@@ -1182,7 +1182,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
                         if (!Methods.T(loginActivity3)) {
                             Methods.o(loginActivity3, loginActivity2.getString(R.string.please_check_internet_connection));
                             break;
-                        } else if (!loginActivity2.f20339A.getString("login_type", null).equals("activationXOR")) {
+                        } else if (!"activationXOR".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             String str3 = Config.f21195b;
                             if (!str3.equals("yes") || !AbstractC1027eH.y(LoginActivity.f20336H0)) {
                                 if (android.support.v4.media.a.y("ORT_WHICH_PANEL", "xtreamcodes", "m3u")) {
@@ -1317,9 +1317,9 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
                             break;
                         }
                     case 1:
-                        if (loginActivity2.f20339A.getString("login_type", null).equals("activation")) {
+                        if ("activation".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             LoginActivity.f20337I0.setText(LoginActivity.f20338J0.getText().toString());
-                        } else if (loginActivity2.f20339A.getString("login_type", null).equals("mac")) {
+                        } else if ("mac".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             LoginActivity.f20337I0.setText(loginActivity2.f20339A.getString("mac", null));
                             LoginActivity.f20338J0.setText(loginActivity2.f20339A.getString("mac", null));
                         }
@@ -1327,7 +1327,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
                         if (!Methods.T(loginActivity3)) {
                             Methods.o(loginActivity3, loginActivity2.getString(R.string.please_check_internet_connection));
                             break;
-                        } else if (!loginActivity2.f20339A.getString("login_type", null).equals("activationXOR")) {
+                        } else if (!"activationXOR".equals(loginActivity2.f20339A.getString("login_type", null))) {
                             String str3 = Config.f21195b;
                             if (!str3.equals("yes") || !AbstractC1027eH.y(LoginActivity.f20336H0)) {
                                 if (android.support.v4.media.a.y("ORT_WHICH_PANEL", "xtreamcodes", "m3u")) {
@@ -1436,7 +1436,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
         if (this.f20339A.contains("btn_signup")) {
             this.f20356N = this.f20339A.getString("btn_signup", null);
             Log.d("XCIPTV_TAG", "---------------btn signup -- " + this.f20356N);
-            if (this.f20356N.equals("no") || this.f20356N.length() == 0) {
+            if (this.f20356N == null || "no".equals(this.f20356N) || this.f20356N.length() == 0) {
                 f20335G0.setVisibility(8);
             } else {
                 f20335G0.setVisibility(0);
@@ -1453,7 +1453,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
         sendBroadcast(new Intent(ORPlayerMainActivity.FINISH_ALERT));
         h();
         o();
-        if (str.equals("no")) {
+        if ("no".equals(str)) {
             if ("0".equals(this.f20339A.getString("portal2", null))) {
                 SharedPreferences.Editor edit2 = this.f20339A.edit();
                 this.f20341B = edit2;
@@ -1464,7 +1464,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
                 n();
             }
         }
-        if (this.f20339A.getString("btn_login_settings", null).equals("yes")) {
+        if ("yes".equals(this.f20339A.getString("btn_login_settings", null))) {
             this.f20368Z.setVisibility(0);
         } else {
             this.f20368Z.setVisibility(8);

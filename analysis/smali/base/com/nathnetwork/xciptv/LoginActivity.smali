@@ -6642,7 +6642,7 @@
 
     .line 244
     .line 245
-    const/4 v6, 0x0
+    const-string v6, ""
 
     .line 246
     invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -6992,7 +6992,7 @@
 
     .line 428
     .line 429
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 430
     .line 431
@@ -7180,7 +7180,7 @@
 
     .line 520
     .line 521
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 522
     .line 523
@@ -7207,7 +7207,7 @@
 
     .line 531
     .line 532
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 533
     .line 534
@@ -7234,7 +7234,7 @@
 
     .line 542
     .line 543
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 544
     .line 545
@@ -7390,7 +7390,7 @@
 
     .line 614
     .line 615
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 616
     .line 617
@@ -7544,7 +7544,8 @@
 
     .line 697
     .line 698
-    invoke-interface {v3, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v4, "no"
+    invoke-interface {v3, v5, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 699
     .line 700
@@ -7595,7 +7596,7 @@
 
     .line 724
     .line 725
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 726
     .line 727
@@ -7765,7 +7766,7 @@
     .line 808
     .line 809
     .line 810
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 811
     .line 812
@@ -7797,7 +7798,7 @@
 
     .line 825
     .line 826
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 827
     .line 828
@@ -7887,7 +7888,7 @@
 
     .line 870
     .line 871
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 872
     .line 873
