@@ -538,8 +538,10 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
         boolean equals = this.f20354L.equals("1");
         LoginActivity loginActivity = this.f20343C;
         if (!equals) {
-            String string = this.f20339A.getString("login_type", null);
-            string.getClass();
+            String string = this.f20339A.getString("login_type", "login");
+            if (string == null) {
+                string = "login";
+            }
             int hashCode = string.hashCode();
             if (hashCode == 107855) {
                 if (string.equals("mac")) {
@@ -719,7 +721,9 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
     public final void o() {
         char c7;
         String c8 = Cv.M().c("ORT_WHICH_PANEL", "xtreamcodes");
-        c8.getClass();
+        if (c8 == null) {
+            c8 = "xtreamcodes";
+        }
         char c9 = 3;
         char c10 = 2;
         switch (c8.hashCode()) {
@@ -756,8 +760,10 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
                 break;
         }
         if (c7 == 0) {
-            String string = this.f20339A.getString("login_type", null);
-            string.getClass();
+            String string = this.f20339A.getString("login_type", "login");
+            if (string == null) {
+                string = "login";
+            }
             switch (string.hashCode()) {
                 case 107855:
                     if (string.equals("mac")) {
@@ -821,8 +827,10 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
         if (c7 != 3) {
             return;
         }
-        String string2 = this.f20339A.getString("login_type", null);
-        string2.getClass();
+        String string2 = this.f20339A.getString("login_type", "login");
+        if (string2 == null) {
+            string2 = "login";
+        }
         switch (string2.hashCode()) {
             case 107855:
                 if (string2.equals("mac")) {

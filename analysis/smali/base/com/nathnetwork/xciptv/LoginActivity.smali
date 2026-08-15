@@ -5127,6 +5127,10 @@
     .line 14
     move-result-object v1
 
+    if-nez v1, :o_panel_ready
+    move-object v1, v3
+    :o_panel_ready
+
     .line 15
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -5283,7 +5287,7 @@
 
     .line 79
     .line 80
-    const/4 v11, 0x0
+    const-string v11, "login"
 
     .line 81
     const-string v12, "login_type"
