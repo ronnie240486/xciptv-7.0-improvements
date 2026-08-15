@@ -645,23 +645,23 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
         this.f20375g0 = (ImageView) inflate.findViewById(R.id.img_p3_selected);
         this.f20376h0 = (ImageView) inflate.findViewById(R.id.img_p4_selected);
         this.f20377i0 = (ImageView) inflate.findViewById(R.id.img_p5_selected);
-        if (this.f20339A.getString("portal", null).equals("0")) {
+        if ("0".equals(this.f20339A.getString("portal", null))) {
             button.setVisibility(8);
             this.f20373e0.setVisibility(8);
         }
-        if (this.f20339A.getString("portal2", null).equals("0")) {
+        if ("0".equals(this.f20339A.getString("portal2", null))) {
             button2.setVisibility(8);
             this.f20374f0.setVisibility(8);
         }
-        if (this.f20339A.getString("portal3", null).equals("0")) {
+        if ("0".equals(this.f20339A.getString("portal3", null))) {
             button3.setVisibility(8);
             this.f20375g0.setVisibility(8);
         }
-        if (this.f20339A.getString("portal4", null).equals("0")) {
+        if ("0".equals(this.f20339A.getString("portal4", null))) {
             button4.setVisibility(8);
             this.f20376h0.setVisibility(8);
         }
-        if (this.f20339A.getString("portal5", null).equals("0")) {
+        if ("0".equals(this.f20339A.getString("portal5", null))) {
             button5.setVisibility(8);
             this.f20377i0.setVisibility(8);
         }
@@ -1454,7 +1454,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
         h();
         o();
         if (str.equals("no")) {
-            if (this.f20339A.getString("portal2", null).equals("0")) {
+            if ("0".equals(this.f20339A.getString("portal2", null))) {
                 SharedPreferences.Editor edit2 = this.f20339A.edit();
                 this.f20341B = edit2;
                 edit2.putString("XCIPTV_WHICH_PORTAL_SELECTED", "1");
