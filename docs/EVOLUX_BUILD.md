@@ -15,13 +15,19 @@ O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa 
 | Tipo de chave | RSA 2048 de desenvolvimento |
 | Alias | `evolux` |
 | APK | `dist/evolux-7.0-dev.apk` |
-| SHA-256 | `b6284499663ebbd019ccd1333c5316d8d09667ed146d7a35250da63a3c80ae5a` |
+| SHA-256 | `ac92740d1a80912b83aee588106f108eb7db327e375038b25be2d9ff263323ba` |
 | Package | `com.nathnetwork.xciptv` |
 | Nome exibido | `Evolux` |
 
 A keystore de desenvolvimento **não é versionada**. O APK foi validado por teste de integridade ZIP e assinatura v1/v2/v3. A build final inclui as sete bibliotecas nativas `arm64-v8a`, incluindo `libnative-lib.so`, `libffmpeg.so`, `libffmpegJNI.so`, `libvlc.so`, `libvlcjni.so`, `libavresample.so` e `libc++_shared.so`. Também foi confirmada a presença de `app_name=Evolux` e das variantes de ícone. No `LoginActivity`, as comparações de `login_type`, `portal`, `btn_signup`, `btn_login_settings` e `Config.f21195b` foram tornadas null-safe; `mac` agora usa string vazia como fallback antes de `toUpperCase()`. Em `LoginActivity.o()`, `ORT_WHICH_PANEL` usa `xtreamcodes` quando a leitura retorna nulo e `login_type` usa `login` como fallback. No `onResume`, a preferência `language` usa `pt` como fallback antes da construção de `Locale`. A apresentação inicial agora usa a imagem familiar fornecida como fundo, o logo Evolux em estilo 3D com movimento suave e o texto `Evolux Player` revelado em efeito de máquina de escrever; o áudio original foi preservado. O recurso `bg2` agora usa a imagem familiar fornecida como fundo padrão 16:9; ele permanece um recurso fallback, podendo ser substituído por uma atualização do painel. As cores globais de fundo continuam pretas para as telas que não usam imagem. O ícone foi refinado para um mark circular mais simples e transparente.
 
 > Esta é uma build de teste derivada de código decompilado. O erro de `libnative-lib.so` e os NullPointerExceptions reportados no fluxo inicial do LoginActivity foram corrigidos na embalagem/bytecode, incluindo as ocorrências apontadas em `onCreate(SourceFile:616)`, `o(SourceFile:108)` e `onResume(SourceFile:64)`. A aplicação ainda não foi executada novamente em um dispositivo ou emulador nesta sessão; a validação funcional em runtime continua necessária, especialmente para confirmar a apresentação visual no aparelho. A checagem nativa que comparava o nome legado XCIPTV e chamava `finishAffinity()` foi removida do fluxo do SplashActivity, pois era a causa do fechamento após a primeira carga com a marca Evolux. A referência de contexto usada pelo restante do método foi preservada para evitar VerifyError de registrador indefinido. O método `SplashActivity.i()` agora usa a flag `S` como trava idempotente, impedindo que respostas assíncronas iniciem três instâncias sobrepostas de `LoginActivity`.
+
+## Integração com o backend Rencia
+
+A tela antiga de DNS, usuário e senha foi ocultada. O APK gera um identificador estável em formato `AA:BB:CC:DD:EE:FF` a partir do `ANDROID_ID`, exibe o valor e oferece o botão `COPIAR IDENTIFICADOR`. Ao abrir, consulta `https://renciaapp.manus.space/api/device/check?mac={MAC}`; quando `allowed=true`, consulta `/api/guim.php?mac={MAC}`, grava as credenciais retornadas e reaproveita o fluxo Xtream/M3U existente para carregar o conteúdo. Quando o aparelho ainda não está cadastrado ou não há lista ativa, a reprodução permanece bloqueada e a tela informa a situação sem mostrar detalhes internos do painel.
+
+A base também inclui a trava contra requisições duplicadas do bootstrap e mantém o package interno `com.nathnetwork.xciptv`. O identificador é estável entre reinstalações no mesmo perfil Android enquanto o `ANDROID_ID` não for alterado; ele não é o MAC físico do Wi‑Fi. O contrato completo do backend, incluindo heartbeat, notificações, failover, comandos remotos, aparência dinâmica e atualização, está registrado em `work/backend_contract_notes.md`; esta build integra o fluxo inicial de validação e carregamento de listas, enquanto os ciclos de heartbeat/comandos permanecem como próxima etapa.
 
 ## Instalação
 

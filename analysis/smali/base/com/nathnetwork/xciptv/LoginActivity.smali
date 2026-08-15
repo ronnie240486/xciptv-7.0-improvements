@@ -1169,7 +1169,20 @@
 .method public final e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1
+    const-string v0, "RENCIA_DEVICE_CHECK"
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v0
+    if-eqz v0, :e_check_lists
+    invoke-virtual {p0, p1}, Lcom/nathnetwork/xciptv/LoginActivity;->u(Ljava/lang/String;)V
+    return-void
+:e_check_lists
+    const-string v0, "RENCIA_LISTS"
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v0
+    if-eqz v0, :e_original
+    invoke-virtual {p0, p1}, Lcom/nathnetwork/xciptv/LoginActivity;->v(Ljava/lang/String;)V
+    return-void
+:e_original
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 2
@@ -6638,23 +6651,9 @@
 
     .line 240
     .line 241
-    iget-object v4, p0, Lcom/nathnetwork/xciptv/LoginActivity;->A:Landroid/content/SharedPreferences;
-
-    .line 242
-    .line 243
-    const-string v5, "mac"
-
-    .line 244
-    .line 245
-    const-string v6, ""
-
-    .line 246
-    invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 247
-    .line 248
-    .line 249
+    invoke-virtual {p0}, Lcom/nathnetwork/xciptv/LoginActivity;->r()Ljava/lang/String;
     move-result-object v4
+    const-string v6, ""
 
     .line 250
     invoke-virtual {v4}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -7927,6 +7926,7 @@
     .line 887
     .line 888
     :goto_8
+    invoke-virtual {p0}, Lcom/nathnetwork/xciptv/LoginActivity;->s()V
     return-void
 
     .line 889
@@ -9582,4 +9582,245 @@
         0x1af2d -> :sswitch_1
         0x49aeee6b -> :sswitch_0
     .end sparse-switch
+.end method
+
+
+.method public final r()Ljava/lang/String;
+    .locals 7
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    move-result-object v0
+    const-string v1, "android_id"
+    invoke-static {v0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+    if-eqz v0, :r_fallback
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    move-result v1
+    if-lez v1, :r_fallback
+    goto :r_ready
+:r_fallback
+    const-string v0, "0000000000000000"
+:r_ready
+    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v3, 0x0
+:r_loop
+    const/16 v4, 0xc
+    if-ge v3, v4, :r_done
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    move-result v5
+    rem-int v5, v3, v5
+    invoke-virtual {v0, v5}, Ljava/lang/String;->charAt(I)C
+    move-result v5
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v5, 0x1
+    and-int/lit8 v5, v3, 0x1
+    if-eqz v5, :r_next
+    const/16 v6, 0xb
+    if-ne v3, v6, :r_add_colon
+    goto :r_next
+:r_add_colon
+    const-string v6, ":"
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+:r_next
+    add-int/lit8 v3, v3, 0x1
+    goto :r_loop
+:r_done
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+    move-result-object v0
+    return-object v0
+.end method
+
+.method public final s()V
+    .locals 8
+    iget-boolean v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
+    if-nez v0, :s_done
+    const/4 v0, 0x1
+    iput-boolean v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
+    invoke-virtual {p0}, Lcom/nathnetwork/xciptv/LoginActivity;->r()Ljava/lang/String;
+    move-result-object v3
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->A:Landroid/content/SharedPreferences;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    move-result-object v4
+    const-string v1, "mac"
+    invoke-interface {v4, v1, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v1, "login_type"
+    const-string v2, "mac"
+    invoke-interface {v4, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v1, "whichPanel"
+    const-string v2, "xtreamcodes"
+    invoke-interface {v4, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->apply()V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->s0:Landroid/widget/FrameLayout;
+    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->R:Landroid/widget/FrameLayout;
+    const/16 v1, 0x8
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->j0:Landroid/widget/FrameLayout;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->k0:Landroid/widget/FrameLayout;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    sget-object v0, Lcom/nathnetwork/xciptv/LoginActivity;->F0:Landroid/widget/Button;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    sget-object v0, Lcom/nathnetwork/xciptv/LoginActivity;->G0:Landroid/widget/Button;
+    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    const-string v1, "COPIAR IDENTIFICADOR"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    new-instance v1, Lj5/RenciaCopyListener;
+    invoke-direct {v1, p0}, Lj5/RenciaCopyListener;-><init>(Lcom/nathnetwork/xciptv/LoginActivity;)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->Z:Landroid/widget/Button;
+    const/16 v1, 0x8
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->l0:Landroid/widget/TextView;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->p0:Landroid/widget/TextView;
+    const-string v1, "MAC: "
+    invoke-virtual {v1, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v1
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->q0:Landroid/widget/TextView;
+    const-string v1, "Cole este identificador no painel"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->r0:Landroid/widget/TextView;
+    const-string v1, "Depois de ativar, as listas serao carregadas automaticamente"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    const-string v0, "https://renciaapp.manus.space/api/device/check?mac="
+    invoke-virtual {v0, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+    new-instance v1, Lj/C2974w;
+    const-string v2, "RENCIA_DEVICE_CHECK"
+    invoke-direct {v1, p0, p0, v2, v0}, Lj/C2974w;-><init>(Landroid/app/Activity;Lcom/nathnetwork/xciptv/util/e;Ljava/lang/String;Ljava/lang/String;)V
+:s_done
+    return-void
+.end method
+
+.method public final u(Ljava/lang/String;)V
+    .locals 7
+    :try_start_rencia_device
+    new-instance v0, Lorg/json/JSONObject;
+    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    const-string v1, "allowed"
+    const/4 v2, 0x0
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+    move-result v1
+    if-eqz v1, :u_blocked
+    invoke-virtual {p0}, Lcom/nathnetwork/xciptv/LoginActivity;->r()Ljava/lang/String;
+    move-result-object v3
+    const-string v0, "https://renciaapp.manus.space/api/guim.php?mac="
+    invoke-virtual {v0, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+    new-instance v1, Lj/C2974w;
+    const-string v2, "RENCIA_LISTS"
+    invoke-direct {v1, p0, p0, v2, v0}, Lj/C2974w;-><init>(Landroid/app/Activity;Lcom/nathnetwork/xciptv/util/e;Ljava/lang/String;Ljava/lang/String;)V
+    return-void
+:u_blocked
+    const/4 v1, 0x0
+    iput-boolean v1, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->q0:Landroid/widget/TextView;
+    const-string v1, "Dispositivo ainda nao ativado"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->r0:Landroid/widget/TextView;
+    const-string v1, "Cadastre o identificador no painel e toque em copiar para atualizar"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return-void
+    :try_end_rencia_device
+    .catch Lorg/json/JSONException; {:try_start_rencia_device .. :try_end_rencia_device} :catch_rencia_device
+:catch_rencia_device
+    const/4 v0, 0x0
+    iput-boolean v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->q0:Landroid/widget/TextView;
+    const-string v1, "Resposta invalida do servidor"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return-void
+.end method
+
+.method public final v(Ljava/lang/String;)V
+    .locals 9
+    :try_start_rencia_lists
+    new-instance v0, Lorg/json/JSONObject;
+    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    const-string v1, "data"
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    move-result-object v1
+    if-eqz v1, :v_empty
+    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
+    move-result v2
+    if-lez v2, :v_empty
+    const/4 v2, 0x0
+    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+    move-result-object v1
+    if-eqz v1, :v_empty
+    const-string v2, "url"
+    const-string v3, ""
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v4
+    const-string v2, "username"
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v5
+    const-string v2, "password"
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v6
+    const-string v2, "type"
+    const-string v3, "xtream"
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v7
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    move-result v2
+    if-lez v2, :v_empty
+    iput-object v5, p0, Lcom/nathnetwork/xciptv/LoginActivity;->T:Ljava/lang/String;
+    iput-object v6, p0, Lcom/nathnetwork/xciptv/LoginActivity;->U:Ljava/lang/String;
+    iput-object v4, p0, Lcom/nathnetwork/xciptv/LoginActivity;->V:Ljava/lang/String;
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->A:Landroid/content/SharedPreferences;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    move-result-object v0
+    const-string v1, "portal"
+    invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v1, "username"
+    invoke-interface {v0, v1, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v1, "password"
+    invoke-interface {v0, v1, v6}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v1, "login_type"
+    const-string v2, "mac"
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v1, "whichPanel"
+    const-string v2, "m3u"
+    const-string v3, "m3u"
+    invoke-virtual {v2, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v2
+    if-eqz v2, :v_xtream
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    goto :v_commit
+:v_xtream
+    const-string v2, "xtreamcodes"
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+:v_commit
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    const/4 v0, 0x0
+    iput-boolean v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
+    const-string v0, "PAINEL"
+    invoke-virtual {p0, v0}, Lcom/nathnetwork/xciptv/LoginActivity;->p(Ljava/lang/String;)V
+    return-void
+:v_empty
+    const/4 v0, 0x0
+    iput-boolean v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->q0:Landroid/widget/TextView;
+    const-string v1, "Nenhuma lista ativa encontrada"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->r0:Landroid/widget/TextView;
+    const-string v1, "Ative uma lista no painel para carregar os conteudos"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return-void
+    :try_end_rencia_lists
+    .catch Lorg/json/JSONException; {:try_start_rencia_lists .. :try_end_rencia_lists} :catch_rencia_lists
+:catch_rencia_lists
+    const/4 v0, 0x0
+    iput-boolean v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->q0:Landroid/widget/TextView;
+    const-string v1, "Nao foi possivel carregar a lista"
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return-void
 .end method
