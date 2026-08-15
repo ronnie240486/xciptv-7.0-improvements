@@ -51,3 +51,7 @@ O conteúdo pode incluir código, marcas, bibliotecas e recursos sujeitos a dire
 ## Próximas melhorias sugeridas
 
 A sequência técnica mais segura é: primeiro tornar a base compilável; depois criar testes de inicialização e navegação; em seguida isolar configuração, autenticação, players, EPG, gravação e atualização de conteúdo; por fim implementar personalização de marca, DNS e painel de forma modular, com validação de segurança e compatibilidade Android/TV.
+
+## Build Evolux de teste
+
+A build `dist/evolux-7.0-dev.apk` aplica o nome exibido **Evolux** e o novo logo. O package interno permanece `com.nathnetwork.xciptv` nesta primeira etapa para preservar referências da base recuperada. Consulte `docs/EVOLUX_BUILD.md` para o SHA-256, a assinatura de desenvolvimento e as limitações de instalação.

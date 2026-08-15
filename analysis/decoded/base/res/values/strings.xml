@@ -25,7 +25,7 @@
     <string name="account_is_not_setup">Account is not setup. Please update username and password.</string>
     <string name="after_clearing_the_cache_the_app_will_restart">After clearing the cache, the app will restart.</string>
     <string name="androidx_startup">androidx.startup</string>
-    <string name="app_name">XCIPTV</string>
+    <string name="app_name">Evolux</string>
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="are_you_sure_you_want_to_exit">Are you sure you want to exit?</string>
     <string name="auto_start_app_after_reboot">Auto Start App After Reboot</string>

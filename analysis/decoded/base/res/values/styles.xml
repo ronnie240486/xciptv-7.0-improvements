@@ -1885,9 +1885,9 @@
         <item name="maxActionInlineWidth">@dimen/design_snackbar_action_inline_max_width</item>
     </style>
     <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
-        <item name="tabGravity">0</item>
+        <item name="tabGravity">center</item>
         <item name="tabIndicatorFullWidth">true</item>
-        <item name="tabMode">1</item>
+        <item name="tabMode">scrollable</item>
     </style>
     <style name="Widget.Design.TextInputLayout" parent="@android:style/Widget">
         <item name="boxBackgroundMode">none</item>

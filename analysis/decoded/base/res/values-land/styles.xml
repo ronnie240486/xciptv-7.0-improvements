@@ -2,6 +2,6 @@
 <resources>
     <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
         <item name="tabGravity">center</item>
-        <item name="tabMode">1</item>
+        <item name="tabMode">scrollable</item>
     </style>
 </resources>
