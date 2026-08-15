@@ -9691,9 +9691,9 @@
     const-string v0, "https://renciaapp.manus.space/api/device/check?mac="
     invoke-virtual {v0, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
     move-result-object v0
-    new-instance v1, Lj/C2974w;
+    new-instance v1, Lj/w;
     const-string v2, "RENCIA_DEVICE_CHECK"
-    invoke-direct {v1, p0, p0, v2, v0}, Lj/C2974w;-><init>(Landroid/app/Activity;Lcom/nathnetwork/xciptv/util/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p0, v2, v0}, Lj/w;-><init>(Landroid/app/Activity;Lcom/nathnetwork/xciptv/util/e;Ljava/lang/String;Ljava/lang/String;)V
 :s_done
     return-void
 .end method
@@ -9713,9 +9713,9 @@
     const-string v0, "https://renciaapp.manus.space/api/guim.php?mac="
     invoke-virtual {v0, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
     move-result-object v0
-    new-instance v1, Lj/C2974w;
+    new-instance v1, Lj/w;
     const-string v2, "RENCIA_LISTS"
-    invoke-direct {v1, p0, p0, v2, v0}, Lj/C2974w;-><init>(Landroid/app/Activity;Lcom/nathnetwork/xciptv/util/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p0, v2, v0}, Lj/w;-><init>(Landroid/app/Activity;Lcom/nathnetwork/xciptv/util/e;Ljava/lang/String;Ljava/lang/String;)V
     return-void
 :u_blocked
     const/4 v1, 0x0
