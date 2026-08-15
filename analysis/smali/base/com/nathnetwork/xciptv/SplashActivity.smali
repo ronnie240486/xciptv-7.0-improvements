@@ -203,6 +203,8 @@
     .line 1
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    iget-object v1, p0, Lcom/nathnetwork/xciptv/SplashActivity;->x:Lcom/nathnetwork/xciptv/SplashActivity;
+
     .line 2
     .line 3
     .line 4
