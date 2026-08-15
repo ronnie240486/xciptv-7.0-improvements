@@ -15,7 +15,7 @@ O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa 
 | Tipo de chave | RSA 2048 de desenvolvimento |
 | Alias | `evolux` |
 | APK | `dist/evolux-7.0-dev.apk` |
-| SHA-256 | `e5628bede713bc99f74eeaabe6698f4de8d1fd8f325dc8a98a0a0ec6bf9dc1c9` |
+| SHA-256 | `d4e13d2f4d2411e535b8a0e3bf5b13de83f94dd58ca798d978b82d56d2461ff9` |
 | Package | `com.nathnetwork.xciptv` |
 | Nome exibido | `Evolux` |
 
@@ -27,7 +27,7 @@ A keystore de desenvolvimento **não é versionada**. O APK foi validado por tes
 
 A tela antiga de DNS, usuário e senha foi ocultada. O APK gera um identificador estável em formato `AA:BB:CC:DD:EE:FF` a partir do `ANDROID_ID`, exibe o valor e oferece o botão `COPIAR IDENTIFICADOR`. Ao abrir, consulta `https://renciaapp.manus.space/api/device/check?mac={MAC}`; quando `allowed=true`, consulta `/api/guim.php?mac={MAC}`, grava as credenciais retornadas e reaproveita o fluxo Xtream/M3U existente para carregar o conteúdo. Quando o aparelho ainda não está cadastrado ou não há lista ativa, a reprodução permanece bloqueada e a tela informa a situação sem mostrar detalhes internos do painel.
 
-A base também inclui a trava contra requisições duplicadas do bootstrap e mantém o package interno `com.nathnetwork.xciptv`. O identificador é estável entre reinstalações no mesmo perfil Android enquanto o `ANDROID_ID` não for alterado; ele não é o MAC físico do Wi‑Fi. O contrato completo do backend, incluindo heartbeat, notificações, failover, comandos remotos, aparência dinâmica e atualização, está registrado em `docs/BACKEND_CONTRACT.md`; esta build integra o fluxo inicial de validação e carregamento de listas, enquanto os ciclos de heartbeat/comandos permanecem como próxima etapa. A referência do cliente HTTP foi corrigida para a classe real `j/w` presente no dex; o nome `C2974w` era apenas o nome da decompilação Java.
+A base também inclui a trava contra requisições duplicadas do bootstrap e mantém o package interno `com.nathnetwork.xciptv`. O identificador é estável entre reinstalações no mesmo perfil Android enquanto o `ANDROID_ID` não for alterado; ele não é o MAC físico do Wi‑Fi. O contrato completo do backend, incluindo heartbeat, notificações, failover, comandos remotos, aparência dinâmica e atualização, está registrado em `docs/BACKEND_CONTRACT.md`; esta build integra o fluxo inicial de validação e carregamento de listas, enquanto os ciclos de heartbeat/comandos permanecem como próxima etapa. A referência do cliente HTTP foi corrigida para a classe real `j/w` presente no dex; o nome `C2974w` era apenas o nome da decompilação Java. O retorno ao identificador após o carregamento foi corrigido gravando `login_type=login` e um perfil `PAINEL (XC)` ou `PAINEL (M3U)`, formato esperado pelo SplashActivity para reconhecer a sessão e permanecer em CategoriesActivity.
 
 ## Instalação
 

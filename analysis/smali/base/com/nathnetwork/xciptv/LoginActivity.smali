@@ -9784,7 +9784,7 @@
     const-string v1, "password"
     invoke-interface {v0, v1, v6}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
     const-string v1, "login_type"
-    const-string v2, "mac"
+    const-string v2, "login"
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
     const-string v1, "whichPanel"
     const-string v2, "m3u"
@@ -9799,9 +9799,17 @@
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 :v_commit
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-    const/4 v0, 0x0
-    iput-boolean v0, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
-    const-string v0, "PAINEL"
+    const-string v0, "m3u"
+    invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v0
+    if-eqz v0, :v_profile_xc
+    const-string v0, "PAINEL (M3U)"
+    goto :v_profile_ready
+:v_profile_xc
+    const-string v0, "PAINEL (XC)"
+:v_profile_ready
+    const/4 v1, 0x0
+    iput-boolean v1, p0, Lcom/nathnetwork/xciptv/LoginActivity;->t0:Z
     invoke-virtual {p0, v0}, Lcom/nathnetwork/xciptv/LoginActivity;->p(Ljava/lang/String;)V
     return-void
 :v_empty
