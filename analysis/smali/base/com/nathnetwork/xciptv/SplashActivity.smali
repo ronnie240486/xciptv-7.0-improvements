@@ -2792,6 +2792,11 @@
 .method public final i()V
     .locals 3
 
+    iget-boolean v0, p0, Lcom/nathnetwork/xciptv/SplashActivity;->S:Z
+    if-nez v0, :login_already_started
+    const/4 v0, 0x1
+    iput-boolean v0, p0, Lcom/nathnetwork/xciptv/SplashActivity;->S:Z
+
     .line 1
     iget-object v0, p0, Lcom/nathnetwork/xciptv/SplashActivity;->x:Lcom/nathnetwork/xciptv/SplashActivity;
 
@@ -2920,6 +2925,9 @@
     .line 64
     .line 65
     .line 66
+    return-void
+
+    :login_already_started
     return-void
 .end method
 
