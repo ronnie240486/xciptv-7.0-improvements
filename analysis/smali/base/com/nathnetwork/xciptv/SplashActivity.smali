@@ -206,49 +206,9 @@
     .line 2
     .line 3
     .line 4
-    invoke-static {}, Lcom/nathnetwork/xciptv/SplashActivity;->AN()Ljava/lang/String;
-
-    .line 5
-    .line 6
-    .line 7
-    move-result-object v0
-
-    .line 8
-    iget-object v1, p0, Lcom/nathnetwork/xciptv/SplashActivity;->x:Lcom/nathnetwork/xciptv/SplashActivity;
-
-    .line 9
-    .line 10
-    const v2, 0x7f130020
-
-    .line 11
-    .line 12
-    .line 13
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    .line 14
-    .line 15
-    .line 16
-    move-result-object v2
-
-    .line 17
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 18
-    .line 19
-    .line 20
-    move-result v0
-
-    .line 21
-    if-nez v0, :cond_0
-
-    .line 22
-    .line 23
-    invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
-
-    .line 24
-    .line 25
-    .line 26
-    :cond_0
+    # The original binary compared a native XCIPTV name against app_name and
+    # called finishAffinity() after the rebrand. Evolux intentionally skips that
+    # legacy brand guard so the first-run splash can continue normally.
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     .line 27

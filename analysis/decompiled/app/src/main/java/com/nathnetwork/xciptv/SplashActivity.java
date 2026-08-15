@@ -212,11 +212,9 @@ public class SplashActivity extends Activity implements e, InterfaceC3313c {
 
     public static void a(SplashActivity splashActivity) {
         splashActivity.getClass();
-        String AN = AN();
         SplashActivity splashActivity2 = splashActivity.f20993x;
-        if (!AN.equals(splashActivity2.getString(R.string.app_name))) {
-            splashActivity.finishAffinity();
-        }
+        // The original binary closed the app when its native legacy name did not
+        // match app_name. That guard is intentionally removed for Evolux.
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
         String format = simpleDateFormat.format(new Date());
         new Date();
