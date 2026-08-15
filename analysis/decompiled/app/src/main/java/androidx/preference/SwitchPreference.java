@@ -1,0 +1,69 @@
+package androidx.preference;
+
+import H0.a;
+import H0.c;
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.accessibility.AccessibilityManager;
+import android.widget.Checkable;
+import android.widget.Switch;
+import com.bumptech.glide.e;
+import com.google.ads.interactivemedia.R;
+
+/* loaded from: classes.dex */
+public class SwitchPreference extends TwoStatePreference {
+
+    /* renamed from: O, reason: collision with root package name */
+    public final a f7588O;
+
+    /* renamed from: P, reason: collision with root package name */
+    public final CharSequence f7589P;
+
+    /* renamed from: Q, reason: collision with root package name */
+    public final CharSequence f7590Q;
+
+    /* JADX WARN: Illegal instructions before constructor call */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+    */
+    public SwitchPreference(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet, r0);
+        int d7 = e.d(context, R.attr.switchPreferenceStyle, android.R.attr.switchPreferenceStyle);
+        this.f7588O = new a(this, 1);
+        TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, c.f1126j, d7, 0);
+        this.f7595K = e.g(obtainStyledAttributes, 7, 0);
+        String string = obtainStyledAttributes.getString(6);
+        this.f7596L = string == null ? obtainStyledAttributes.getString(1) : string;
+        String string2 = obtainStyledAttributes.getString(9);
+        this.f7589P = string2 == null ? obtainStyledAttributes.getString(3) : string2;
+        String string3 = obtainStyledAttributes.getString(8);
+        this.f7590Q = string3 == null ? obtainStyledAttributes.getString(4) : string3;
+        this.f7598N = obtainStyledAttributes.getBoolean(5, obtainStyledAttributes.getBoolean(2, false));
+        obtainStyledAttributes.recycle();
+    }
+
+    @Override // androidx.preference.Preference
+    public final void f(View view) {
+        super.f(view);
+        if (((AccessibilityManager) this.f7582x.getSystemService("accessibility")).isEnabled()) {
+            KeyEvent.Callback findViewById = view.findViewById(android.R.id.switch_widget);
+            boolean z7 = findViewById instanceof Switch;
+            if (z7) {
+                ((Switch) findViewById).setOnCheckedChangeListener(null);
+            }
+            if (findViewById instanceof Checkable) {
+                ((Checkable) findViewById).setChecked(this.f7594J);
+            }
+            if (z7) {
+                Switch r02 = (Switch) findViewById;
+                r02.setTextOn(this.f7589P);
+                r02.setTextOff(this.f7590Q);
+                r02.setOnCheckedChangeListener(this.f7588O);
+            }
+            i(view.findViewById(android.R.id.summary));
+        }
+    }
+}

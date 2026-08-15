@@ -1,0 +1,5 @@
+*.apk binary
+*.zip binary
+*.dex binary
+*.so binary
+*.png binary

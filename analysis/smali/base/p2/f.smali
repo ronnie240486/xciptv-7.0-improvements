@@ -1,0 +1,1231 @@
+.class public abstract Lp2/f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/ads/A;Lcom/google/android/gms/internal/ads/C;JJJJJI)V
+    .locals 14
+
+    .line 1
+    move-object v0, p0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    move-object/from16 v1, p2
+
+    iput-object v1, v0, Lp2/f;->c:Ljava/lang/Object;
+
+    move/from16 v1, p13
+
+    iput v1, v0, Lp2/f;->a:I
+
+    new-instance v13, Lcom/google/android/gms/internal/ads/y;
+
+    move-object v1, v13
+
+    move-object v2, p1
+
+    move-wide/from16 v3, p3
+
+    move-wide/from16 v5, p5
+
+    move-wide/from16 v7, p7
+
+    move-wide/from16 v9, p9
+
+    move-wide/from16 v11, p11
+
+    invoke-direct/range {v1 .. v12}, Lcom/google/android/gms/internal/ads/y;-><init>(Lcom/google/android/gms/internal/ads/A;JJJJJ)V
+
+    iput-object v13, v0, Lp2/f;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lp2/c;Lp2/e;JJJJJI)V
+    .locals 14
+
+    .line 3
+    move-object v0, p0
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    move-object/from16 v1, p2
+
+    .line 5
+    iput-object v1, v0, Lp2/f;->c:Ljava/lang/Object;
+
+    move/from16 v1, p13
+
+    .line 6
+    iput v1, v0, Lp2/f;->a:I
+
+    .line 7
+    new-instance v13, Lp2/a;
+
+    move-object v1, v13
+
+    move-object v2, p1
+
+    move-wide/from16 v3, p3
+
+    move-wide/from16 v5, p5
+
+    move-wide/from16 v7, p7
+
+    move-wide/from16 v9, p9
+
+    move-wide/from16 v11, p11
+
+    invoke-direct/range {v1 .. v12}, Lp2/a;-><init>(Lp2/c;JJJJJ)V
+
+    iput-object v13, v0, Lp2/f;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static b(Lp2/n;JLp2/q;)I
+    .locals 2
+
+    .line 1
+    invoke-interface {p0}, Lp2/n;->s()J
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-wide v0
+
+    .line 5
+    cmp-long p0, p1, v0
+
+    .line 6
+    .line 7
+    if-nez p0, :cond_0
+
+    .line 8
+    .line 9
+    const/4 p0, 0x0
+
+    .line 10
+    return p0
+
+    .line 11
+    :cond_0
+    iput-wide p1, p3, Lp2/q;->b:J
+
+    .line 12
+    .line 13
+    const/4 p0, 0x1
+
+    .line 14
+    return p0
+.end method
+
+.method public static final f(Lcom/google/android/gms/internal/ads/L;JLp2/q;)I
+    .locals 2
+
+    .line 1
+    invoke-interface {p0}, Lcom/google/android/gms/internal/ads/L;->zzf()J
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-wide v0
+
+    .line 5
+    cmp-long p0, p1, v0
+
+    .line 6
+    .line 7
+    if-nez p0, :cond_0
+
+    .line 8
+    .line 9
+    const/4 p0, 0x0
+
+    .line 10
+    return p0
+
+    .line 11
+    :cond_0
+    iput-wide p1, p3, Lp2/q;->b:J
+
+    .line 12
+    .line 13
+    const/4 p0, 0x1
+
+    .line 14
+    return p0
+.end method
+
+
+# virtual methods
+.method public final a(Lp2/n;Lp2/q;)I
+    .locals 27
+
+    .line 1
+    move-object/from16 v0, p0
+
+    .line 2
+    .line 3
+    move-object/from16 v1, p1
+
+    .line 4
+    .line 5
+    move-object/from16 v2, p2
+
+    .line 6
+    .line 7
+    :goto_0
+    iget-object v3, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    check-cast v3, Lp2/b;
+
+    .line 10
+    .line 11
+    invoke-static {v3}, LN6/b;->h(Ljava/lang/Object;)V
+
+    .line 12
+    .line 13
+    .line 14
+    iget-wide v4, v3, Lp2/b;->f:J
+
+    .line 15
+    .line 16
+    iget-wide v6, v3, Lp2/b;->g:J
+
+    .line 17
+    .line 18
+    iget-wide v8, v3, Lp2/b;->h:J
+
+    .line 19
+    .line 20
+    sub-long/2addr v6, v4
+
+    .line 21
+    iget v10, v0, Lp2/f;->a:I
+
+    .line 22
+    .line 23
+    int-to-long v10, v10
+
+    .line 24
+    const/4 v12, 0x0
+
+    .line 25
+    iget-object v13, v0, Lp2/f;->c:Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    cmp-long v14, v6, v10
+
+    .line 28
+    .line 29
+    if-gtz v14, :cond_0
+
+    .line 30
+    .line 31
+    iput-object v12, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 32
+    .line 33
+    check-cast v13, Lp2/e;
+
+    .line 34
+    .line 35
+    invoke-interface {v13}, Lp2/e;->l()V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-static {v1, v4, v5, v2}, Lp2/f;->b(Lp2/n;JLp2/q;)I
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v1
+
+    .line 42
+    return v1
+
+    .line 43
+    :cond_0
+    invoke-interface/range {p1 .. p1}, Lp2/n;->s()J
+
+    .line 44
+    .line 45
+    .line 46
+    move-result-wide v4
+
+    .line 47
+    sub-long v4, v8, v4
+
+    .line 48
+    .line 49
+    const-wide/16 v6, 0x0
+
+    .line 50
+    .line 51
+    cmp-long v10, v4, v6
+
+    .line 52
+    .line 53
+    if-ltz v10, :cond_6
+
+    .line 54
+    .line 55
+    const-wide/32 v10, 0x40000
+
+    .line 56
+    .line 57
+    .line 58
+    cmp-long v14, v4, v10
+
+    .line 59
+    .line 60
+    if-gtz v14, :cond_6
+
+    .line 61
+    .line 62
+    long-to-int v5, v4
+
+    .line 63
+    invoke-interface {v1, v5}, Lp2/n;->k(I)V
+
+    .line 64
+    .line 65
+    .line 66
+    invoke-interface/range {p1 .. p1}, Lp2/n;->i()V
+
+    .line 67
+    .line 68
+    .line 69
+    move-object v4, v13
+
+    .line 70
+    check-cast v4, Lp2/e;
+
+    .line 71
+    .line 72
+    iget-wide v14, v3, Lp2/b;->b:J
+
+    .line 73
+    .line 74
+    invoke-interface {v4, v1, v14, v15}, Lp2/e;->f(Lp2/n;J)Lp2/d;
+
+    .line 75
+    .line 76
+    .line 77
+    move-result-object v4
+
+    .line 78
+    const/4 v5, -0x3
+
+    .line 79
+    iget v14, v4, Lp2/d;->a:I
+
+    .line 80
+    .line 81
+    if-eq v14, v5, :cond_5
+
+    .line 82
+    .line 83
+    const/4 v5, -0x2
+
+    .line 84
+    iget-wide v8, v4, Lp2/d;->b:J
+
+    .line 85
+    .line 86
+    move-object/from16 v16, v13
+
+    .line 87
+    .line 88
+    iget-wide v12, v4, Lp2/d;->c:J
+
+    .line 89
+    .line 90
+    if-eq v14, v5, :cond_4
+
+    .line 91
+    .line 92
+    const/4 v4, -0x1
+
+    .line 93
+    if-eq v14, v4, :cond_3
+
+    .line 94
+    .line 95
+    if-nez v14, :cond_2
+
+    .line 96
+    .line 97
+    invoke-interface/range {p1 .. p1}, Lp2/n;->s()J
+
+    .line 98
+    .line 99
+    .line 100
+    move-result-wide v3
+
+    .line 101
+    sub-long v3, v12, v3
+
+    .line 102
+    .line 103
+    cmp-long v5, v3, v6
+
+    .line 104
+    .line 105
+    if-ltz v5, :cond_1
+
+    .line 106
+    .line 107
+    cmp-long v5, v3, v10
+
+    .line 108
+    .line 109
+    if-gtz v5, :cond_1
+
+    .line 110
+    .line 111
+    long-to-int v4, v3
+
+    .line 112
+    invoke-interface {v1, v4}, Lp2/n;->k(I)V
+
+    .line 113
+    .line 114
+    .line 115
+    :cond_1
+    const/4 v3, 0x0
+
+    .line 116
+    iput-object v3, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 117
+    .line 118
+    move-object/from16 v3, v16
+
+    .line 119
+    .line 120
+    check-cast v3, Lp2/e;
+
+    .line 121
+    .line 122
+    invoke-interface {v3}, Lp2/e;->l()V
+
+    .line 123
+    .line 124
+    .line 125
+    invoke-static {v1, v12, v13, v2}, Lp2/f;->b(Lp2/n;JLp2/q;)I
+
+    .line 126
+    .line 127
+    .line 128
+    move-result v1
+
+    .line 129
+    return v1
+
+    .line 130
+    :cond_2
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    .line 131
+    .line 132
+    const-string v2, "Invalid case"
+
+    .line 133
+    .line 134
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 135
+    .line 136
+    .line 137
+    throw v1
+
+    .line 138
+    :cond_3
+    iput-wide v8, v3, Lp2/b;->e:J
+
+    .line 139
+    .line 140
+    iput-wide v12, v3, Lp2/b;->g:J
+
+    .line 141
+    .line 142
+    iget-wide v4, v3, Lp2/b;->d:J
+
+    .line 143
+    .line 144
+    iget-wide v6, v3, Lp2/b;->f:J
+
+    .line 145
+    .line 146
+    iget-wide v10, v3, Lp2/b;->c:J
+
+    .line 147
+    .line 148
+    iget-wide v14, v3, Lp2/b;->b:J
+
+    .line 149
+    .line 150
+    move-wide v15, v14
+
+    .line 151
+    move-wide/from16 v17, v4
+
+    .line 152
+    .line 153
+    move-wide/from16 v19, v8
+
+    .line 154
+    .line 155
+    move-wide/from16 v21, v6
+
+    .line 156
+    .line 157
+    move-wide/from16 v23, v12
+
+    .line 158
+    .line 159
+    move-wide/from16 v25, v10
+
+    .line 160
+    .line 161
+    invoke-static/range {v15 .. v26}, Lp2/b;->a(JJJJJJ)J
+
+    .line 162
+    .line 163
+    .line 164
+    move-result-wide v4
+
+    .line 165
+    iput-wide v4, v3, Lp2/b;->h:J
+
+    .line 166
+    .line 167
+    goto/16 :goto_0
+
+    .line 168
+    .line 169
+    :cond_4
+    iput-wide v8, v3, Lp2/b;->d:J
+
+    .line 170
+    .line 171
+    iput-wide v12, v3, Lp2/b;->f:J
+
+    .line 172
+    .line 173
+    iget-wide v4, v3, Lp2/b;->e:J
+
+    .line 174
+    .line 175
+    iget-wide v6, v3, Lp2/b;->g:J
+
+    .line 176
+    .line 177
+    iget-wide v10, v3, Lp2/b;->c:J
+
+    .line 178
+    .line 179
+    iget-wide v14, v3, Lp2/b;->b:J
+
+    .line 180
+    .line 181
+    move-wide v15, v14
+
+    .line 182
+    move-wide/from16 v17, v8
+
+    .line 183
+    .line 184
+    move-wide/from16 v19, v4
+
+    .line 185
+    .line 186
+    move-wide/from16 v21, v12
+
+    .line 187
+    .line 188
+    move-wide/from16 v23, v6
+
+    .line 189
+    .line 190
+    move-wide/from16 v25, v10
+
+    .line 191
+    .line 192
+    invoke-static/range {v15 .. v26}, Lp2/b;->a(JJJJJJ)J
+
+    .line 193
+    .line 194
+    .line 195
+    move-result-wide v4
+
+    .line 196
+    iput-wide v4, v3, Lp2/b;->h:J
+
+    .line 197
+    .line 198
+    goto/16 :goto_0
+
+    .line 199
+    .line 200
+    :cond_5
+    move-object v3, v12
+
+    .line 201
+    move-object/from16 v16, v13
+
+    .line 202
+    .line 203
+    iput-object v3, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 204
+    .line 205
+    move-object/from16 v13, v16
+
+    .line 206
+    .line 207
+    check-cast v13, Lp2/e;
+
+    .line 208
+    .line 209
+    invoke-interface {v13}, Lp2/e;->l()V
+
+    .line 210
+    .line 211
+    .line 212
+    invoke-static {v1, v8, v9, v2}, Lp2/f;->b(Lp2/n;JLp2/q;)I
+
+    .line 213
+    .line 214
+    .line 215
+    move-result v1
+
+    .line 216
+    return v1
+
+    .line 217
+    :cond_6
+    invoke-static {v1, v8, v9, v2}, Lp2/f;->b(Lp2/n;JLp2/q;)I
+
+    .line 218
+    .line 219
+    .line 220
+    move-result v1
+
+    .line 221
+    return v1
+.end method
+
+.method public final c(J)V
+    .locals 20
+
+    .line 1
+    move-object/from16 v0, p0
+
+    .line 2
+    .line 3
+    move-wide/from16 v2, p1
+
+    .line 4
+    .line 5
+    iget-object v1, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 6
+    .line 7
+    move-object v4, v1
+
+    .line 8
+    check-cast v4, Lp2/b;
+
+    .line 9
+    .line 10
+    if-eqz v4, :cond_0
+
+    .line 11
+    .line 12
+    check-cast v1, Lp2/b;
+
+    .line 13
+    .line 14
+    iget-wide v4, v1, Lp2/b;->a:J
+
+    .line 15
+    .line 16
+    cmp-long v1, v4, v2
+
+    .line 17
+    .line 18
+    if-nez v1, :cond_0
+
+    .line 19
+    .line 20
+    return-void
+
+    .line 21
+    :cond_0
+    new-instance v14, Lp2/b;
+
+    .line 22
+    .line 23
+    iget-object v1, v0, Lp2/f;->b:Ljava/lang/Object;
+
+    .line 24
+    .line 25
+    check-cast v1, Lp2/a;
+
+    .line 26
+    .line 27
+    iget-object v4, v1, Lp2/a;->a:Lp2/c;
+
+    .line 28
+    .line 29
+    invoke-interface {v4, v2, v3}, Lp2/c;->e(J)J
+
+    .line 30
+    .line 31
+    .line 32
+    move-result-wide v4
+
+    .line 33
+    iget-wide v6, v1, Lp2/a;->c:J
+
+    .line 34
+    .line 35
+    iget-wide v8, v1, Lp2/a;->d:J
+
+    .line 36
+    .line 37
+    iget-wide v10, v1, Lp2/a;->e:J
+
+    .line 38
+    .line 39
+    iget-wide v12, v1, Lp2/a;->f:J
+
+    .line 40
+    .line 41
+    move-wide v15, v12
+
+    .line 42
+    iget-wide v12, v1, Lp2/a;->g:J
+
+    .line 43
+    .line 44
+    move-object v1, v14
+
+    .line 45
+    move-wide/from16 v2, p1
+
+    .line 46
+    .line 47
+    move-wide/from16 v17, v12
+
+    .line 48
+    .line 49
+    move-wide v12, v15
+
+    .line 50
+    move-object/from16 v19, v14
+
+    .line 51
+    .line 52
+    move-wide/from16 v14, v17
+
+    .line 53
+    .line 54
+    invoke-direct/range {v1 .. v15}, Lp2/b;-><init>(JJJJJJJ)V
+
+    .line 55
+    .line 56
+    .line 57
+    move-object/from16 v1, v19
+
+    .line 58
+    .line 59
+    iput-object v1, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 60
+    .line 61
+    return-void
+.end method
+
+.method public final d(Lcom/google/android/gms/internal/ads/L;Lp2/q;)I
+    .locals 17
+
+    .line 1
+    move-object/from16 v0, p0
+
+    .line 2
+    .line 3
+    move-object/from16 v1, p1
+
+    .line 4
+    .line 5
+    move-object/from16 v2, p2
+
+    .line 6
+    .line 7
+    :goto_0
+    iget-object v3, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 8
+    .line 9
+    check-cast v3, Lcom/google/android/gms/internal/ads/z;
+
+    .line 10
+    .line 11
+    invoke-static {v3}, Ll3/d;->N(Ljava/lang/Object;)V
+
+    .line 12
+    .line 13
+    .line 14
+    iget-wide v4, v3, Lcom/google/android/gms/internal/ads/z;->g:J
+
+    .line 15
+    .line 16
+    iget-wide v6, v3, Lcom/google/android/gms/internal/ads/z;->h:J
+
+    .line 17
+    .line 18
+    sub-long/2addr v6, v4
+
+    .line 19
+    iget-wide v8, v3, Lcom/google/android/gms/internal/ads/z;->i:J
+
+    .line 20
+    .line 21
+    iget v10, v0, Lp2/f;->a:I
+
+    .line 22
+    .line 23
+    int-to-long v10, v10
+
+    .line 24
+    const/4 v12, 0x0
+
+    .line 25
+    iget-object v13, v0, Lp2/f;->c:Ljava/lang/Object;
+
+    .line 26
+    .line 27
+    cmp-long v14, v6, v10
+
+    .line 28
+    .line 29
+    if-gtz v14, :cond_0
+
+    .line 30
+    .line 31
+    iput-object v12, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 32
+    .line 33
+    check-cast v13, Lcom/google/android/gms/internal/ads/C;
+
+    .line 34
+    .line 35
+    invoke-interface {v13}, Lcom/google/android/gms/internal/ads/C;->zzb()V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-static {v1, v4, v5, v2}, Lp2/f;->f(Lcom/google/android/gms/internal/ads/L;JLp2/q;)I
+
+    .line 39
+    .line 40
+    .line 41
+    move-result v1
+
+    .line 42
+    return v1
+
+    .line 43
+    :cond_0
+    invoke-interface/range {p1 .. p1}, Lcom/google/android/gms/internal/ads/L;->zzf()J
+
+    .line 44
+    .line 45
+    .line 46
+    move-result-wide v4
+
+    .line 47
+    sub-long v4, v8, v4
+
+    .line 48
+    .line 49
+    const-wide/16 v6, 0x0
+
+    .line 50
+    .line 51
+    cmp-long v10, v4, v6
+
+    .line 52
+    .line 53
+    if-ltz v10, :cond_5
+
+    .line 54
+    .line 55
+    const-wide/32 v10, 0x40000
+
+    .line 56
+    .line 57
+    .line 58
+    cmp-long v14, v4, v10
+
+    .line 59
+    .line 60
+    if-gtz v14, :cond_5
+
+    .line 61
+    .line 62
+    long-to-int v5, v4
+
+    .line 63
+    move-object v4, v1
+
+    .line 64
+    check-cast v4, Lcom/google/android/gms/internal/ads/E;
+
+    .line 65
+    .line 66
+    invoke-virtual {v4, v5}, Lcom/google/android/gms/internal/ads/E;->e(I)V
+
+    .line 67
+    .line 68
+    .line 69
+    invoke-interface/range {p1 .. p1}, Lcom/google/android/gms/internal/ads/L;->h()V
+
+    .line 70
+    .line 71
+    .line 72
+    move-object v4, v13
+
+    .line 73
+    check-cast v4, Lcom/google/android/gms/internal/ads/C;
+
+    .line 74
+    .line 75
+    iget-wide v14, v3, Lcom/google/android/gms/internal/ads/z;->c:J
+
+    .line 76
+    .line 77
+    invoke-interface {v4, v1, v14, v15}, Lcom/google/android/gms/internal/ads/C;->e(Lcom/google/android/gms/internal/ads/L;J)Lcom/google/android/gms/internal/ads/B;
+
+    .line 78
+    .line 79
+    .line 80
+    move-result-object v4
+
+    .line 81
+    const/4 v5, -0x3
+
+    .line 82
+    iget v14, v4, Lcom/google/android/gms/internal/ads/B;->a:I
+
+    .line 83
+    .line 84
+    if-eq v14, v5, :cond_4
+
+    .line 85
+    .line 86
+    const/4 v5, -0x2
+
+    .line 87
+    iget-wide v8, v4, Lcom/google/android/gms/internal/ads/B;->b:J
+
+    .line 88
+    .line 89
+    move-object/from16 v16, v13
+
+    .line 90
+    .line 91
+    iget-wide v12, v4, Lcom/google/android/gms/internal/ads/B;->c:J
+
+    .line 92
+    .line 93
+    if-eq v14, v5, :cond_3
+
+    .line 94
+    .line 95
+    const/4 v4, -0x1
+
+    .line 96
+    if-eq v14, v4, :cond_2
+
+    .line 97
+    .line 98
+    invoke-interface/range {p1 .. p1}, Lcom/google/android/gms/internal/ads/L;->zzf()J
+
+    .line 99
+    .line 100
+    .line 101
+    move-result-wide v3
+
+    .line 102
+    sub-long v3, v12, v3
+
+    .line 103
+    .line 104
+    cmp-long v5, v3, v6
+
+    .line 105
+    .line 106
+    if-ltz v5, :cond_1
+
+    .line 107
+    .line 108
+    cmp-long v5, v3, v10
+
+    .line 109
+    .line 110
+    if-gtz v5, :cond_1
+
+    .line 111
+    .line 112
+    long-to-int v4, v3
+
+    .line 113
+    move-object v3, v1
+
+    .line 114
+    check-cast v3, Lcom/google/android/gms/internal/ads/E;
+
+    .line 115
+    .line 116
+    invoke-virtual {v3, v4}, Lcom/google/android/gms/internal/ads/E;->e(I)V
+
+    .line 117
+    .line 118
+    .line 119
+    :cond_1
+    const/4 v3, 0x0
+
+    .line 120
+    iput-object v3, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 121
+    .line 122
+    move-object/from16 v3, v16
+
+    .line 123
+    .line 124
+    check-cast v3, Lcom/google/android/gms/internal/ads/C;
+
+    .line 125
+    .line 126
+    invoke-interface {v3}, Lcom/google/android/gms/internal/ads/C;->zzb()V
+
+    .line 127
+    .line 128
+    .line 129
+    invoke-static {v1, v12, v13, v2}, Lp2/f;->f(Lcom/google/android/gms/internal/ads/L;JLp2/q;)I
+
+    .line 130
+    .line 131
+    .line 132
+    move-result v1
+
+    .line 133
+    return v1
+
+    .line 134
+    :cond_2
+    iput-wide v8, v3, Lcom/google/android/gms/internal/ads/z;->f:J
+
+    .line 135
+    .line 136
+    iput-wide v12, v3, Lcom/google/android/gms/internal/ads/z;->h:J
+
+    .line 137
+    .line 138
+    invoke-virtual {v3}, Lcom/google/android/gms/internal/ads/z;->b()V
+
+    .line 139
+    .line 140
+    .line 141
+    goto/16 :goto_0
+
+    .line 142
+    .line 143
+    :cond_3
+    iput-wide v8, v3, Lcom/google/android/gms/internal/ads/z;->e:J
+
+    .line 144
+    .line 145
+    iput-wide v12, v3, Lcom/google/android/gms/internal/ads/z;->g:J
+
+    .line 146
+    .line 147
+    invoke-virtual {v3}, Lcom/google/android/gms/internal/ads/z;->b()V
+
+    .line 148
+    .line 149
+    .line 150
+    goto/16 :goto_0
+
+    .line 151
+    .line 152
+    :cond_4
+    move-object v3, v12
+
+    .line 153
+    move-object/from16 v16, v13
+
+    .line 154
+    .line 155
+    iput-object v3, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 156
+    .line 157
+    move-object/from16 v13, v16
+
+    .line 158
+    .line 159
+    check-cast v13, Lcom/google/android/gms/internal/ads/C;
+
+    .line 160
+    .line 161
+    invoke-interface {v13}, Lcom/google/android/gms/internal/ads/C;->zzb()V
+
+    .line 162
+    .line 163
+    .line 164
+    invoke-static {v1, v8, v9, v2}, Lp2/f;->f(Lcom/google/android/gms/internal/ads/L;JLp2/q;)I
+
+    .line 165
+    .line 166
+    .line 167
+    move-result v1
+
+    .line 168
+    return v1
+
+    .line 169
+    :cond_5
+    invoke-static {v1, v8, v9, v2}, Lp2/f;->f(Lcom/google/android/gms/internal/ads/L;JLp2/q;)I
+
+    .line 170
+    .line 171
+    .line 172
+    move-result v1
+
+    .line 173
+    return v1
+.end method
+
+.method public final e(J)V
+    .locals 15
+
+    .line 1
+    move-object v0, p0
+
+    .line 2
+    move-wide/from16 v2, p1
+
+    .line 3
+    .line 4
+    iget-object v1, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    check-cast v1, Lcom/google/android/gms/internal/ads/z;
+
+    .line 7
+    .line 8
+    if-eqz v1, :cond_0
+
+    .line 9
+    .line 10
+    iget-wide v4, v1, Lcom/google/android/gms/internal/ads/z;->b:J
+
+    .line 11
+    .line 12
+    cmp-long v1, v4, v2
+
+    .line 13
+    .line 14
+    if-nez v1, :cond_0
+
+    .line 15
+    .line 16
+    return-void
+
+    .line 17
+    :cond_0
+    iget-object v1, v0, Lp2/f;->b:Ljava/lang/Object;
+
+    .line 18
+    .line 19
+    check-cast v1, Lcom/google/android/gms/internal/ads/y;
+
+    .line 20
+    .line 21
+    new-instance v14, Lcom/google/android/gms/internal/ads/z;
+
+    .line 22
+    .line 23
+    iget-object v4, v1, Lcom/google/android/gms/internal/ads/y;->a:Lcom/google/android/gms/internal/ads/A;
+
+    .line 24
+    .line 25
+    invoke-interface {v4, v2, v3}, Lcom/google/android/gms/internal/ads/A;->j(J)J
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-wide v4
+
+    .line 29
+    iget-wide v6, v1, Lcom/google/android/gms/internal/ads/y;->c:J
+
+    .line 30
+    .line 31
+    iget-wide v10, v1, Lcom/google/android/gms/internal/ads/y;->e:J
+
+    .line 32
+    .line 33
+    iget-wide v12, v1, Lcom/google/android/gms/internal/ads/y;->f:J
+
+    .line 34
+    .line 35
+    iget-wide v8, v1, Lcom/google/android/gms/internal/ads/y;->d:J
+
+    .line 36
+    .line 37
+    move-object v1, v14
+
+    .line 38
+    move-wide/from16 v2, p1
+
+    .line 39
+    .line 40
+    invoke-direct/range {v1 .. v13}, Lcom/google/android/gms/internal/ads/z;-><init>(JJJJJJ)V
+
+    .line 41
+    .line 42
+    .line 43
+    iput-object v14, v0, Lp2/f;->d:Ljava/lang/Object;
+
+    .line 44
+    .line 45
+    return-void
+.end method

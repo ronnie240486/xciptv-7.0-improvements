@@ -1,0 +1,22 @@
+package Z3;
+
+import com.google.android.gms.internal.measurement.B4;
+import com.google.android.gms.internal.measurement.C2286z4;
+import com.google.android.gms.internal.measurement.InterfaceC2280y4;
+import java.util.List;
+
+/* loaded from: classes.dex */
+public final /* synthetic */ class T implements InterfaceC0247u1 {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ T f5710a = new T();
+
+    @Override // Z3.InterfaceC0247u1
+    public final Object zza() {
+        List list = AbstractC0245u.f6154a;
+        ((B4) ((InterfaceC2280y4) C2286z4.f18974y.get())).getClass();
+        Long l7 = (Long) B4.f18432d.a();
+        l7.getClass();
+        return l7;
+    }
+}

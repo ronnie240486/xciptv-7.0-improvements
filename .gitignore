@@ -1,0 +1,16 @@
+# IDE / local build output
+.gradle/
+.idea/
+*.iml
+build/
+.externalNativeBuild/
+.cxx/
+
+# Local analysis logs and caches
+*.log
+__pycache__/
+*.pyc
+
+# Tool bundles are not part of the repository
+jadx.zip
+apktool.jar

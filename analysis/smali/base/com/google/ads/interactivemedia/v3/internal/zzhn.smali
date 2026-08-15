@@ -1,0 +1,43 @@
+.class public final synthetic Lcom/google/ads/interactivemedia/v3/internal/zzhn;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lc4/a;
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/ads/interactivemedia/v3/internal/zzhu;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/ads/interactivemedia/v3/internal/zzhu;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/ads/interactivemedia/v3/internal/zzhn;->zza:Lcom/google/ads/interactivemedia/v3/internal/zzhu;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final then(Lc4/h;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/google/ads/interactivemedia/v3/internal/zzhn;->zza:Lcom/google/ads/interactivemedia/v3/internal/zzhu;
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/google/ads/interactivemedia/v3/internal/zzhu;->zza(Lcom/google/ads/interactivemedia/v3/internal/zzhu;Lc4/h;)Lc4/h;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    return-object p1
+.end method
