@@ -15,13 +15,13 @@ O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa 
 | Tipo de chave | RSA 2048 de desenvolvimento |
 | Alias | `evolux` |
 | APK | `dist/evolux-7.0-dev.apk` |
-| SHA-256 | `2a143b0618bd64d2c71cc2080c6be63d6a1ac72db3e3e18e329a90264e71a4cf` |
+| SHA-256 | `d722c0b5dc25f381db84f597987d2a3681b06de8458948fbfcecbd1d9936fb9f` |
 | Package | `com.nathnetwork.xciptv` |
 | Nome exibido | `Evolux` |
 
-A keystore de desenvolvimento **não é versionada**. O APK foi validado por teste de integridade ZIP e assinatura v1/v2/v3. A build final inclui as sete bibliotecas nativas `arm64-v8a`, incluindo `libnative-lib.so`, `libffmpeg.so`, `libffmpegJNI.so`, `libvlc.so`, `libvlcjni.so`, `libavresample.so` e `libc++_shared.so`. Também foi confirmada a presença de `app_name=Evolux` e das variantes de ícone. No `LoginActivity`, as comparações de `login_type`, `portal`, `btn_signup`, `btn_login_settings` e `Config.f21195b` foram tornadas null-safe; `mac` agora usa string vazia como fallback antes de `toUpperCase()`. Em `LoginActivity.o()`, `ORT_WHICH_PANEL` usa `xtreamcodes` quando a leitura retorna nulo e `login_type` usa `login` como fallback.
+A keystore de desenvolvimento **não é versionada**. O APK foi validado por teste de integridade ZIP e assinatura v1/v2/v3. A build final inclui as sete bibliotecas nativas `arm64-v8a`, incluindo `libnative-lib.so`, `libffmpeg.so`, `libffmpegJNI.so`, `libvlc.so`, `libvlcjni.so`, `libavresample.so` e `libc++_shared.so`. Também foi confirmada a presença de `app_name=Evolux` e das variantes de ícone. No `LoginActivity`, as comparações de `login_type`, `portal`, `btn_signup`, `btn_login_settings` e `Config.f21195b` foram tornadas null-safe; `mac` agora usa string vazia como fallback antes de `toUpperCase()`. Em `LoginActivity.o()`, `ORT_WHICH_PANEL` usa `xtreamcodes` quando a leitura retorna nulo e `login_type` usa `login` como fallback. No `onResume`, a preferência `language` usa `pt` como fallback antes da construção de `Locale`.
 
-> Esta é uma build de teste derivada de código decompilado. O erro de `libnative-lib.so` e os NullPointerExceptions reportados no fluxo inicial do LoginActivity foram corrigidos na embalagem/bytecode, incluindo as ocorrências apontadas em `onCreate(SourceFile:616)` e `o(SourceFile:108)`. A aplicação ainda não foi executada novamente em um dispositivo ou emulador nesta sessão; a validação funcional em runtime continua necessária.
+> Esta é uma build de teste derivada de código decompilado. O erro de `libnative-lib.so` e os NullPointerExceptions reportados no fluxo inicial do LoginActivity foram corrigidos na embalagem/bytecode, incluindo as ocorrências apontadas em `onCreate(SourceFile:616)`, `o(SourceFile:108)` e `onResume(SourceFile:64)`. A aplicação ainda não foi executada novamente em um dispositivo ou emulador nesta sessão; a validação funcional em runtime continua necessária.
 
 ## Instalação
 

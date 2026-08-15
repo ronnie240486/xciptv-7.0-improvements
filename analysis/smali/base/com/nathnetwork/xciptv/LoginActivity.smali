@@ -8171,7 +8171,7 @@
 
     .line 58
     .line 59
-    const/4 v4, 0x0
+    const-string v4, "pt"
 
     .line 60
     invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

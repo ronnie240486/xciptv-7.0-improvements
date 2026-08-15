@@ -1502,7 +1502,7 @@ public class LoginActivity extends Activity implements e, InterfaceC3313c {
             b.a(this).b(q7, new IntentFilter("LoginActivity"));
         }
         Configuration configuration = getBaseContext().getResources().getConfiguration();
-        Locale locale = new Locale(this.f20339A.getString("language", null));
+        Locale locale = new Locale(this.f20339A.getString("language", "pt"));
         Locale.setDefault(locale);
         configuration.locale = locale;
         getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());
