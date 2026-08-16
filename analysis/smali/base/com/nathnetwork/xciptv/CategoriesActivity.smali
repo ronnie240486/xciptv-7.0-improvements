@@ -1105,7 +1105,7 @@
 
     .line 12
     .line 13
-    invoke-virtual {p3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p3, p2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 14
     .line 15
@@ -1201,7 +1201,7 @@
 
     .line 5
     .line 6
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 7
     .line 8
@@ -1637,7 +1637,7 @@
 
     .line 172
     .line 173
-    invoke-virtual {v4, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v7}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 174
     .line 175
@@ -1755,7 +1755,7 @@
 
     .line 230
     .line 231
-    invoke-virtual {v4, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v7}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 232
     .line 233
@@ -1902,7 +1902,7 @@
 
     .line 308
     .line 309
-    invoke-virtual {v4, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v11}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 310
     .line 311
@@ -1950,7 +1950,7 @@
     move-result-object v4
 
     .line 333
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 334
     .line 335
@@ -2001,7 +2001,7 @@
     move-result-object v4
 
     .line 358
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 359
     .line 360
@@ -2052,7 +2052,7 @@
     move-result-object v4
 
     .line 383
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 384
     .line 385
@@ -2103,7 +2103,7 @@
     move-result-object v4
 
     .line 408
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 409
     .line 410
@@ -2154,7 +2154,7 @@
     move-result-object v4
 
     .line 433
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 434
     .line 435
@@ -2205,7 +2205,7 @@
     move-result-object v4
 
     .line 458
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 459
     .line 460
@@ -2252,7 +2252,7 @@
     move-result-object v4
 
     .line 481
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 482
     .line 483
@@ -2299,7 +2299,7 @@
     move-result-object v4
 
     .line 504
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 505
     .line 506
@@ -2346,7 +2346,7 @@
     move-result-object v4
 
     .line 527
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 528
     .line 529
@@ -2402,7 +2402,7 @@
 
     .line 554
     .line 555
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 556
     .line 557
@@ -2430,7 +2430,7 @@
     move-result-object v4
 
     .line 569
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 570
     .line 571
@@ -2487,7 +2487,7 @@
     move-result-object v4
 
     .line 596
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 597
     .line 598
@@ -2538,7 +2538,7 @@
     move-result-object v4
 
     .line 621
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 622
     .line 623
@@ -2589,7 +2589,7 @@
     move-result-object v4
 
     .line 646
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 647
     .line 648
@@ -2640,7 +2640,7 @@
     move-result-object v4
 
     .line 671
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 672
     .line 673
@@ -2691,7 +2691,7 @@
     move-result-object v4
 
     .line 696
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 697
     .line 698
@@ -2738,7 +2738,7 @@
     move-result-object v4
 
     .line 719
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 720
     .line 721
@@ -2785,7 +2785,7 @@
     move-result-object v4
 
     .line 742
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 743
     .line 744
@@ -2832,7 +2832,7 @@
     move-result-object v4
 
     .line 765
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 766
     .line 767
@@ -2888,7 +2888,7 @@
 
     .line 792
     .line 793
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 794
     .line 795
@@ -2916,7 +2916,7 @@
     move-result-object v4
 
     .line 807
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 808
     .line 809
@@ -2973,7 +2973,7 @@
     move-result-object v4
 
     .line 834
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 835
     .line 836
@@ -3024,7 +3024,7 @@
     move-result-object v4
 
     .line 859
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 860
     .line 861
@@ -3075,7 +3075,7 @@
     move-result-object v4
 
     .line 884
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 885
     .line 886
@@ -3126,7 +3126,7 @@
     move-result-object v4
 
     .line 909
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 910
     .line 911
@@ -3177,7 +3177,7 @@
     move-result-object v4
 
     .line 934
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 935
     .line 936
@@ -3224,7 +3224,7 @@
     move-result-object v4
 
     .line 957
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 958
     .line 959
@@ -3271,7 +3271,7 @@
     move-result-object v4
 
     .line 980
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 981
     .line 982
@@ -3318,7 +3318,7 @@
     move-result-object v4
 
     .line 1003
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1004
     .line 1005
@@ -3374,7 +3374,7 @@
 
     .line 1030
     .line 1031
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1032
     .line 1033
@@ -3402,7 +3402,7 @@
     move-result-object v4
 
     .line 1045
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1046
     .line 1047
@@ -3459,7 +3459,7 @@
     move-result-object v4
 
     .line 1072
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1073
     .line 1074
@@ -3510,7 +3510,7 @@
     move-result-object v4
 
     .line 1097
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1098
     .line 1099
@@ -3561,7 +3561,7 @@
     move-result-object v4
 
     .line 1122
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1123
     .line 1124
@@ -3612,7 +3612,7 @@
     move-result-object v4
 
     .line 1147
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1148
     .line 1149
@@ -3663,7 +3663,7 @@
     move-result-object v4
 
     .line 1172
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1173
     .line 1174
@@ -3710,7 +3710,7 @@
     move-result-object v4
 
     .line 1195
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1196
     .line 1197
@@ -3757,7 +3757,7 @@
     move-result-object v4
 
     .line 1218
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1219
     .line 1220
@@ -3804,7 +3804,7 @@
     move-result-object v4
 
     .line 1241
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1242
     .line 1243
@@ -3860,7 +3860,7 @@
 
     .line 1268
     .line 1269
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1270
     .line 1271
@@ -3888,7 +3888,7 @@
     move-result-object v4
 
     .line 1283
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1284
     .line 1285
@@ -3945,7 +3945,7 @@
     move-result-object v4
 
     .line 1310
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1311
     .line 1312
@@ -3996,7 +3996,7 @@
     move-result-object v4
 
     .line 1335
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1336
     .line 1337
@@ -4047,7 +4047,7 @@
     move-result-object v4
 
     .line 1360
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1361
     .line 1362
@@ -4098,7 +4098,7 @@
     move-result-object v4
 
     .line 1385
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1386
     .line 1387
@@ -4149,7 +4149,7 @@
     move-result-object v4
 
     .line 1410
-    invoke-virtual {v4, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v15}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1411
     .line 1412
@@ -4196,7 +4196,7 @@
     move-result-object v4
 
     .line 1433
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1434
     .line 1435
@@ -4243,7 +4243,7 @@
     move-result-object v4
 
     .line 1456
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1457
     .line 1458
@@ -4290,7 +4290,7 @@
     move-result-object v4
 
     .line 1479
-    invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v14}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1480
     .line 1481
@@ -4358,7 +4358,7 @@
 
     .line 1511
     .line 1512
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1513
     .line 1514
@@ -4394,7 +4394,7 @@
 
     .line 1529
     .line 1530
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v6}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1531
     .line 1532
@@ -4450,7 +4450,7 @@
     move-result-object v4
 
     .line 1557
-    invoke-virtual {v4, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v4, v7}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 1558
     .line 1559
@@ -4902,7 +4902,7 @@
 
     .line 19
     .line 20
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 21
     .line 22
@@ -5028,7 +5028,7 @@
     move-result-object v0
 
     .line 47
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 48
     .line 49
@@ -10663,7 +10663,7 @@
 
     .line 22
     .line 23
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 24
     .line 25
@@ -10802,7 +10802,7 @@
 
     .line 93
     .line 94
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 95
     .line 96
@@ -10918,7 +10918,7 @@
     move-result v0
 
     .line 12
-    const/4 v2, 0x0
+    const-string v2, ""
 
     .line 13
     if-eqz v0, :cond_0
@@ -10941,7 +10941,7 @@
 
     .line 22
     .line 23
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 24
     .line 25
@@ -11341,12 +11341,11 @@
     .line 223
     .line 224
     :goto_1
-    invoke-static {}, Lcom/nathnetwork/xciptv/CategoriesActivity;->AN()Ljava/lang/String;
+    const-string v1, "Evolux"
 
     .line 225
     .line 226
     .line 227
-    move-result-object v1
 
     .line 228
     const v2, 0x7f130020
@@ -11362,7 +11361,7 @@
     move-result-object v0
 
     .line 235
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 236
     .line 237
@@ -11370,7 +11369,7 @@
     move-result v0
 
     .line 239
-    if-nez v0, :cond_7
+    goto :cond_7
 
     .line 240
     .line 241
