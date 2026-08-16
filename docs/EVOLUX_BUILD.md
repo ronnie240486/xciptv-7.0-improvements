@@ -4,7 +4,7 @@
 
 A marca exibida ao usuário foi alterada de `XCIPTV` para `Evolux` em `@string/app_name`. O ícone do launcher e os principais recursos visuais de marca foram substituídos pelo símbolo Evolux original, preparado em variantes para as densidades Android e para o ícone adaptativo.
 
-O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa decisão reduz o risco de quebrar referências internas recuperadas do APK, mas significa que esta versão não deve ser tratada como uma migração definitiva de identidade técnica. A base manual não contém o fluxo MAC/Rencia. As atividades `SplashVideoActivity`, `SplashActivity`, `LoginActivity` e `CategoriesActivity` foram configuradas como `singleTask` para evitar a abertura duplicada de telas e a permanência de instâncias antigas na pilha. No listener `j5.N` do botão de login, as comparações de `login_type`, `Config.b` e `activationXOR` usam constantes não nulas como receptores de `equals`, eliminando o NPE observado em `onClick(SourceFile:216)`. No fluxo pós-login manual, `papione` e `papitwo` não são mais executados e o `loadLibrary` do `SplashActivity` foi desativado, evitando o fechamento nativo antes da navegação. Em `LoginActivity.c`, a comparação de `login_type` com `mac` usa a constante como receptor de `equals`, evitando o NPE observado em `SourceFile:42`.
+O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa decisão reduz o risco de quebrar referências internas recuperadas do APK, mas significa que esta versão não deve ser tratada como uma migração definitiva de identidade técnica. A base manual não contém o fluxo MAC/Rencia. As atividades `SplashVideoActivity`, `SplashActivity`, `LoginActivity` e `CategoriesActivity` foram configuradas como `singleTask` para evitar a abertura duplicada de telas e a permanência de instâncias antigas na pilha. No listener `j5.N` do botão de login, as comparações de `login_type`, `Config.b` e `activationXOR` usam constantes não nulas como receptores de `equals`, eliminando o NPE observado em `onClick(SourceFile:216)`. No fluxo pós-login manual, `papione` e `papitwo` não são mais executados e o `loadLibrary` do `SplashActivity` foi desativado, evitando o fechamento nativo antes da navegação. Em `LoginActivity.c`, a comparação de `login_type` com `mac` usa a constante como receptor de `equals`, evitando o NPE observado em `SourceFile:42`. Em `LoginActivity.h`, a restauração da sessão salva usa `"yes".equals(valor)`, evitando o NPE observado em `SourceFile:127` após o login ser salvo.
 
 ## Build e validação
 
@@ -15,7 +15,7 @@ O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa 
 | Tipo de chave | RSA 2048 de desenvolvimento |
 | Alias | `evolux` |
 | APK | `dist/evolux-7.0-dev.apk` |
-| SHA-256 | `b8d1086218dc844fe22030cc4dbcc95551cd2a1a63f3d2d03b9eb432a332a712` |
+| SHA-256 | `4e62b05ddd9ced043eb62621ed831d7c561d1580b6eeb627dbb21d8fafaccaf8` |
 | Package | `com.nathnetwork.xciptv` |
 | Nome exibido | `Evolux` |
 
