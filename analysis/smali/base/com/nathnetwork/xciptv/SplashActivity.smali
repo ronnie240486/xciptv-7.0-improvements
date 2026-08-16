@@ -112,11 +112,7 @@
     .locals 1
 
     .line 1
-    const-string v0, "native-lib"
-
-    .line 2
-    .line 3
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    # Native library disabled for manual DNS/login/password recovery build.
 
     .line 4
     .line 5
