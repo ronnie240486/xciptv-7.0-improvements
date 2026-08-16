@@ -3241,59 +3241,27 @@
     move-result-object v5
 
     .line 251
-    sget-object v14, Lcom/nathnetwork/xciptv/LoginActivity;->I0:Landroid/widget/EditText;
+    iget-object v14, v0, Lcom/nathnetwork/xciptv/LoginActivity;->T:Ljava/lang/String;
 
     .line 252
     .line 253
-    invoke-virtual {v14}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-static {v14}, Lcom/nathnetwork/xciptv/encryption/Encrypt;->b(Ljava/lang/String;)Ljava/lang/String;
 
     .line 254
     .line 255
     .line 256
     move-result-object v14
 
-    .line 257
-    invoke-virtual {v14}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 258
-    .line 259
-    .line 260
-    move-result-object v14
-
-    .line 261
-    invoke-static {v14}, Lcom/nathnetwork/xciptv/encryption/Encrypt;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 262
-    .line 263
-    .line 264
-    move-result-object v14
-
     .line 265
-    sget-object v15, Lcom/nathnetwork/xciptv/LoginActivity;->J0:Landroid/widget/EditText;
+    iget-object v15, v0, Lcom/nathnetwork/xciptv/LoginActivity;->U:Ljava/lang/String;
 
     .line 266
     .line 267
-    invoke-virtual {v15}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-static {v15}, Lcom/nathnetwork/xciptv/encryption/Encrypt;->b(Ljava/lang/String;)Ljava/lang/String;
 
     .line 268
     .line 269
     .line 270
-    move-result-object v15
-
-    .line 271
-    invoke-virtual {v15}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    .line 272
-    .line 273
-    .line 274
-    move-result-object v15
-
-    .line 275
-    invoke-static {v15}, Lcom/nathnetwork/xciptv/encryption/Encrypt;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 276
-    .line 277
-    .line 278
     move-result-object v15
 
     .line 279
