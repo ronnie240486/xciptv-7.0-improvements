@@ -112,15 +112,6 @@
     .locals 1
 
     .line 1
-    const-string v0, "native-lib"
-
-    .line 2
-    .line 3
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-
-    .line 4
-    .line 5
-    .line 6
     return-void
 .end method
 
@@ -208,9 +199,6 @@
     .line 2
     .line 3
     .line 4
-    # The original binary compared a native XCIPTV name against app_name and
-    # called finishAffinity() after the rebrand. Evolux intentionally skips that
-    # legacy brand guard so the first-run splash can continue normally.
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     .line 27
@@ -298,7 +286,7 @@
 
     .line 69
     .line 70
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     .line 71
     .line 72
@@ -316,7 +304,7 @@
     move-result v0
 
     .line 79
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 80
     .line 81
@@ -328,7 +316,7 @@
     goto :goto_0
 
     .line 85
-    :cond_1
+    :cond_0
     const-string v0, "Check your internet connection."
 
     .line 86
@@ -346,7 +334,7 @@
     goto :goto_0
 
     .line 94
-    :cond_2
+    :cond_1
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 95
@@ -1947,12 +1935,11 @@
 
     .line 69
     .line 70
-    invoke-static {}, Lcom/nathnetwork/xciptv/SplashActivity;->papitwo()Ljava/lang/String;
+    const-string p1, ""
 
     .line 71
     .line 72
     .line 73
-    move-result-object p1
 
     .line 74
     iput-object p1, p0, Lcom/nathnetwork/xciptv/SplashActivity;->e0:Ljava/lang/String;
@@ -2742,12 +2729,11 @@
 
     .line 233
     .line 234
-    invoke-static {}, Lcom/nathnetwork/xciptv/SplashActivity;->papitwo()Ljava/lang/String;
+    const-string v0, ""
 
     .line 235
     .line 236
     .line 237
-    move-result-object v0
 
     .line 238
     iput-object v0, p0, Lcom/nathnetwork/xciptv/SplashActivity;->e0:Ljava/lang/String;
@@ -4836,12 +4822,11 @@
 
     .line 739
     .line 740
-    invoke-static {}, Lcom/nathnetwork/xciptv/SplashActivity;->papitwo()Ljava/lang/String;
+    const-string v0, ""
 
     .line 741
     .line 742
     .line 743
-    move-result-object v0
 
     .line 744
     iput-object v0, v1, Lcom/nathnetwork/xciptv/SplashActivity;->e0:Ljava/lang/String;
@@ -13253,12 +13238,11 @@
     .line 469
     .line 470
     :goto_5
-    invoke-static {}, Lcom/nathnetwork/xciptv/SplashActivity;->papione()Ljava/lang/String;
+    const-string v0, ""
 
     .line 471
     .line 472
     .line 473
-    move-result-object v0
 
     .line 474
     iput-object v0, v1, Lcom/nathnetwork/xciptv/SplashActivity;->e0:Ljava/lang/String;
