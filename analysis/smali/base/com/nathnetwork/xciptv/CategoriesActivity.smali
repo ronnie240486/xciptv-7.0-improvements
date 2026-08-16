@@ -140,11 +140,7 @@
     .locals 4
 
     .line 1
-    const-string v0, "native-lib"
-
-    .line 2
-    .line 3
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+    # Native library disabled for the recovered manual-login build.
 
     .line 4
     .line 5
@@ -11109,11 +11105,11 @@
     .line 106
     .line 107
     const-string v5, "language"
-    const-string v0, "pt"
+    const-string v2, "pt"
 
     .line 108
     .line 109
-    invoke-interface {v4, v5, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v4, v5, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 110
     .line 111
