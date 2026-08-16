@@ -87,7 +87,7 @@
 
     .line 22
     .line 23
-    invoke-virtual {v0, v1}, Lk5/d;->C(Lorg/json/JSONArray;)V
+    invoke-virtual {v0, v1}, Lk5/d;->B(Lorg/json/JSONArray;)V
 
     .line 24
     .line 25
@@ -97,7 +97,7 @@
 
     .line 27
     .line 28
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
     .line 29
     invoke-direct {v0, v2, v1}, Ls5/f;-><init>(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;I)V
@@ -139,7 +139,7 @@
 
     .line 48
     .line 49
-    invoke-virtual {v0, v1}, Lk5/d;->J(Lorg/json/JSONArray;)V
+    invoke-virtual {v0, v1}, Lk5/d;->z(Lorg/json/JSONArray;)V
 
     .line 50
     .line 51
@@ -149,7 +149,7 @@
 
     .line 53
     .line 54
-    const/4 v1, 0x4
+    const/4 v1, 0x6
 
     .line 55
     invoke-direct {v0, v2, v1}, Ls5/f;-><init>(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;I)V
@@ -191,7 +191,7 @@
 
     .line 74
     .line 75
-    invoke-virtual {v0, v1}, Lk5/d;->z(Lorg/json/JSONArray;)V
+    invoke-virtual {v0, v1}, Lk5/d;->l(Lorg/json/JSONArray;)V
 
     .line 76
     .line 77
@@ -201,7 +201,7 @@
 
     .line 79
     .line 80
-    const/4 v1, 0x0
+    const/4 v1, 0x5
 
     .line 81
     invoke-direct {v0, v2, v1}, Ls5/f;-><init>(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;I)V
@@ -243,7 +243,7 @@
 
     .line 100
     .line 101
-    invoke-virtual {v0, v1}, Lk5/d;->l(Lorg/json/JSONArray;)V
+    invoke-virtual {v0, v1}, Lk5/d;->J(Lorg/json/JSONArray;)V
 
     .line 102
     .line 103
@@ -253,7 +253,7 @@
 
     .line 105
     .line 106
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
     .line 107
     invoke-direct {v0, v2, v1}, Ls5/f;-><init>(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;I)V
@@ -295,7 +295,7 @@
 
     .line 126
     .line 127
-    invoke-virtual {v0, v1}, Lk5/d;->B(Lorg/json/JSONArray;)V
+    invoke-virtual {v0, v1}, Lk5/d;->C(Lorg/json/JSONArray;)V
 
     .line 128
     .line 129
@@ -305,7 +305,7 @@
 
     .line 131
     .line 132
-    const/4 v1, 0x2
+    const/4 v1, 0x3
 
     .line 133
     invoke-direct {v0, v2, v1}, Ls5/f;-><init>(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;I)V
