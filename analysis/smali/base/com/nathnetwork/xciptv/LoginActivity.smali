@@ -737,7 +737,7 @@
 
     .line 42
     .line 43
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 44
     .line 45
@@ -5127,11 +5127,12 @@
     .line 14
     move-result-object v1
 
-    if-nez v1, :o_panel_ready
+    if-nez v1, :cond_0
+
     move-object v1, v3
-    :o_panel_ready
 
     .line 15
+    :cond_0
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 16
@@ -5178,14 +5179,14 @@
     move-result v1
 
     .line 35
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     .line 36
     .line 37
     goto :goto_0
 
     .line 38
-    :cond_0
+    :cond_1
     const/4 v1, 0x3
 
     .line 39
@@ -5205,14 +5206,14 @@
     move-result v1
 
     .line 46
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
     .line 47
     .line 48
     goto :goto_0
 
     .line 49
-    :cond_1
+    :cond_2
     const/4 v1, 0x2
 
     .line 50
@@ -5232,14 +5233,14 @@
     move-result v1
 
     .line 57
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     .line 58
     .line 59
     goto :goto_0
 
     .line 60
-    :cond_2
+    :cond_3
     const/4 v1, 0x1
 
     .line 61
@@ -5259,14 +5260,14 @@
     move-result v1
 
     .line 68
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
     .line 69
     .line 70
     goto :goto_0
 
     .line 71
-    :cond_3
+    :cond_4
     const/4 v1, 0x0
 
     .line 72
@@ -5311,19 +5312,19 @@
 
     .line 91
     .line 92
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_c
 
     .line 93
     .line 94
-    if-eq v1, v6, :cond_a
+    if-eq v1, v6, :cond_b
 
     .line 95
     .line 96
-    if-eq v1, v5, :cond_9
+    if-eq v1, v5, :cond_a
 
     .line 97
     .line 98
-    if-eq v1, v4, :cond_4
+    if-eq v1, v4, :cond_5
 
     .line 99
     .line 100
@@ -5331,7 +5332,7 @@
 
     .line 101
     .line 102
-    :cond_4
+    :cond_5
     iget-object v1, v0, Lcom/nathnetwork/xciptv/LoginActivity;->A:Landroid/content/SharedPreferences;
 
     .line 103
@@ -5378,7 +5379,7 @@
     move-result v1
 
     .line 124
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
     .line 125
     .line 126
@@ -5398,14 +5399,14 @@
     move-result v1
 
     .line 133
-    if-nez v1, :cond_5
+    if-nez v1, :cond_6
 
     .line 134
     .line 135
     goto :goto_2
 
     .line 136
-    :cond_5
+    :cond_6
     const/4 v4, 0x2
 
     .line 137
@@ -5421,14 +5422,14 @@
     move-result v1
 
     .line 142
-    if-nez v1, :cond_6
+    if-nez v1, :cond_7
 
     .line 143
     .line 144
     goto :goto_2
 
     .line 145
-    :cond_6
+    :cond_7
     const/4 v4, 0x1
 
     .line 146
@@ -5444,18 +5445,18 @@
     move-result v1
 
     .line 151
-    if-nez v1, :cond_7
+    if-nez v1, :cond_8
 
     .line 152
     .line 153
     goto :goto_2
 
     .line 154
-    :cond_7
+    :cond_8
     const/4 v4, 0x0
 
     .line 155
-    :cond_8
+    :cond_9
     :goto_3
     packed-switch v4, :pswitch_data_0
 
@@ -5693,7 +5694,7 @@
 
     .line 282
     .line 283
-    :cond_9
+    :cond_a
     iget-object v1, v0, Lcom/nathnetwork/xciptv/LoginActivity;->l0:Landroid/widget/TextView;
 
     .line 284
@@ -5742,7 +5743,7 @@
 
     .line 308
     .line 309
-    :cond_a
+    :cond_b
     iget-object v1, v0, Lcom/nathnetwork/xciptv/LoginActivity;->l0:Landroid/widget/TextView;
 
     .line 310
@@ -5792,7 +5793,7 @@
 
     .line 335
     .line 336
-    :cond_b
+    :cond_c
     iget-object v1, v0, Lcom/nathnetwork/xciptv/LoginActivity;->A:Landroid/content/SharedPreferences;
 
     .line 337
@@ -5839,7 +5840,7 @@
     move-result v1
 
     .line 358
-    if-nez v1, :cond_e
+    if-nez v1, :cond_f
 
     .line 359
     .line 360
@@ -5855,14 +5856,14 @@
     move-result v1
 
     .line 365
-    if-nez v1, :cond_c
+    if-nez v1, :cond_d
 
     .line 366
     .line 367
     goto :goto_4
 
     .line 368
-    :cond_c
+    :cond_d
     const/4 v5, 0x1
 
     .line 369
@@ -5878,18 +5879,18 @@
     move-result v1
 
     .line 374
-    if-nez v1, :cond_d
+    if-nez v1, :cond_e
 
     .line 375
     .line 376
     goto :goto_4
 
     .line 377
-    :cond_d
+    :cond_e
     const/4 v5, 0x0
 
     .line 378
-    :cond_e
+    :cond_f
     :goto_5
     packed-switch v5, :pswitch_data_1
 
@@ -7549,6 +7550,7 @@
     .line 697
     .line 698
     const-string v4, "no"
+
     invoke-interface {v3, v5, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 699
@@ -7928,6 +7930,8 @@
     .line 888
     :goto_8
     return-void
+
+    nop
 
     .line 889
     :sswitch_data_0
