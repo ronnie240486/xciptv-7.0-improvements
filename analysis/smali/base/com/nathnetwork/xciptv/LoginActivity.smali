@@ -3553,7 +3553,7 @@
 
     .line 423
     .line 424
-    const-class v2, Lcom/nathnetwork/xciptv/SplashActivity;
+    const-class v2, Lcom/nathnetwork/xciptv/CategoriesActivity;
 
     .line 425
     .line 426
