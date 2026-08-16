@@ -30,10 +30,14 @@
 
 # virtual methods
 .method public final onFailure(Lokhttp3/Call;Ljava/io/IOException;)V
-    .locals 0
+    .locals 1
 
     .line 1
     invoke-static {}, Lcom/nathnetwork/xciptv/util/Methods;->E()V
+
+    iget-object v0, p0, Ls5/i;->x:Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;
+
+    invoke-static {v0}, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->a(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;)V
 
     .line 2
     .line 3
@@ -259,6 +263,8 @@
     .line 110
     .line 111
     :cond_1
+    invoke-static {p1}, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->a(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;)V
+
     :goto_0
     return-void
 .end method

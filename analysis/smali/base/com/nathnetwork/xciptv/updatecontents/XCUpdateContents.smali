@@ -481,6 +481,14 @@
     .line 159
     .line 160
     :cond_1
+    new-instance v5, Landroid/content/Intent;
+
+    const-class v6, Lcom/nathnetwork/xciptv/CategoriesActivity;
+
+    invoke-direct {v5, p0, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {p0, v5}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     .line 161

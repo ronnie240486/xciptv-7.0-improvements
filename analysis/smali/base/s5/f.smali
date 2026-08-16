@@ -623,6 +623,10 @@
     .line 300
     .line 301
     :cond_0
+    invoke-static {v6}, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->a(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;)V
+
+    return-void
+
     const-string v0, "yes"
 
     .line 302
@@ -712,7 +716,7 @@
     move-result-object v9
 
     .line 348
-    invoke-virtual {v9, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v9, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     .line 349
     .line 350
