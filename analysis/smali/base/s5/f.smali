@@ -529,6 +529,15 @@
     .line 252
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    iget v0, v6, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->T:I
+    add-int/lit8 v0, v0, 0x1
+    iput v0, v6, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->T:I
+    const/16 v11, 0xa
+    if-lt v0, v11, :timeout_continue
+    invoke-static {v6}, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->a(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;)V
+    return-void
+
+    :timeout_continue
     .line 253
     .line 254
     .line 255

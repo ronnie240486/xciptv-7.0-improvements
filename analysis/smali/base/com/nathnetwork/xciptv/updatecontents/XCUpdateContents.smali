@@ -11,6 +11,8 @@
 
 
 # instance fields
+.field public T:I
+
 .field public A:Lp5/i;
 
 .field public final B:Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;
