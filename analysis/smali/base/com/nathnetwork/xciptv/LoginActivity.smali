@@ -3516,6 +3516,9 @@
     .line 412
     .line 413
     invoke-interface {v4, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const-string v1, "rencia_authorized"
+    const/4 v2, 0x1
+    invoke-interface {v4, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     .line 414
     .line 415
@@ -9765,7 +9768,7 @@
 :v_xtream
     const-string v2, "xtreamcodes"
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-:v_commit
+    :v_commit
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
     const-string v0, "m3u"
     invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

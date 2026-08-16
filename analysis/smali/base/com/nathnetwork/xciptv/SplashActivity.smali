@@ -2272,6 +2272,15 @@
 .method public final h()V
     .locals 9
 
+    iget-object v6, p0, Lcom/nathnetwork/xciptv/SplashActivity;->y:Landroid/content/SharedPreferences;
+    const-string v7, "rencia_authorized"
+    const/4 v8, 0x0
+    invoke-interface {v6, v7, v8}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    move-result v6
+    if-eqz v6, :h_legacy_license
+    invoke-virtual {p0}, Lcom/nathnetwork/xciptv/SplashActivity;->f()V
+    return-void
+:h_legacy_license
     .line 1
     const-string v0, "UTF-8"
 
