@@ -1333,15 +1333,11 @@
     move-result v1
 
     .line 13
-    if-nez v1, :cond_0
+    goto :cond_0
 
     .line 14
     .line 15
-    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finishAffinity()V
-
     .line 16
-    .line 17
-    .line 18
     :cond_0
     const-string v1, "ORT_WHICH_PANEL"
 
