@@ -4,7 +4,7 @@
 
 A marca exibida ao usuário foi alterada de `XCIPTV` para `Evolux` em `@string/app_name`. O ícone do launcher e os principais recursos visuais de marca foram substituídos pelo símbolo Evolux original, preparado em variantes para as densidades Android e para o ícone adaptativo.
 
-O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa decisão reduz o risco de quebrar referências internas recuperadas do APK, mas significa que esta versão não deve ser tratada como uma migração definitiva de identidade técnica. A próxima etapa pode alterar o applicationId/package com uma refatoração completa de nomes, referências Smali e configuração de distribuição.
+O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa decisão reduz o risco de quebrar referências internas recuperadas do APK, mas significa que esta versão não deve ser tratada como uma migração definitiva de identidade técnica. A base manual não contém o fluxo MAC/Rencia. As atividades `SplashVideoActivity`, `SplashActivity`, `LoginActivity` e `CategoriesActivity` foram configuradas como `singleTask` para evitar a abertura duplicada de telas e a permanência de instâncias antigas na pilha.
 
 ## Build e validação
 
@@ -15,7 +15,7 @@ O package interno permanece `com.nathnetwork.xciptv` nesta primeira build. Essa 
 | Tipo de chave | RSA 2048 de desenvolvimento |
 | Alias | `evolux` |
 | APK | `dist/evolux-7.0-dev.apk` |
-| SHA-256 | `20dffd476e1c45339c72f5d6154a1ebf0f7cba42ebf3be7ec77e98872d7df3e5` |
+| SHA-256 | `2cb737283011d4c686760246f003ebdbb4e9395396e485ab23e2d26da96ade55` |
 | Package | `com.nathnetwork.xciptv` |
 | Nome exibido | `Evolux` |
 

@@ -43,7 +43,7 @@
     <permission android:name="com.nathnetwork.xciptv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
     <uses-permission android:name="com.nathnetwork.xciptv.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:banner="@mipmap/banner" android:configChanges="fontScale" android:extractNativeLibs="true" android:fullBackupOnly="false" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:isSplitRequired="true" android:label="@string/app_name" android:largeHeap="true" android:name="com.nathnetwork.xciptv.util.OTRApp" android:networkSecurityConfig="@xml/network_security_config" android:required="false" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme.AppCompat.NoActionBar" android:usesCleartextTraffic="true">
-        <activity android:exported="true" android:name="com.nathnetwork.xciptv.SplashVideoActivity" android:screenOrientation="landscape">
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.nathnetwork.xciptv.SplashVideoActivity" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.intent.action.MAIN"/>
@@ -54,12 +54,12 @@
         </activity>
         <activity android:name="com.nathnetwork.xciptv.PlayerSettingsActivity" android:screenOrientation="landscape"/>
         <activity android:name="com.nathnetwork.xciptv.SearchActivity" android:screenOrientation="landscape"/>
-        <activity android:label="Device Status" android:name="com.nathnetwork.xciptv.SplashActivity" android:screenOrientation="landscape"/>
+        <activity android:label="Device Status" android:launchMode="singleTask" android:name="com.nathnetwork.xciptv.SplashActivity" android:screenOrientation="landscape"/>
         <activity android:label="Categories List" android:name="com.nathnetwork.xciptv.ChannelListActivity" android:screenOrientation="landscape"/>
         <activity android:label="Device Status" android:name="com.nathnetwork.xciptv.DeviceStatus" android:screenOrientation="landscape"/>
-        <activity android:label="Settings" android:name="com.nathnetwork.xciptv.CategoriesActivity" android:screenOrientation="landscape"/>
+        <activity android:label="Settings" android:launchMode="singleTask" android:name="com.nathnetwork.xciptv.CategoriesActivity" android:screenOrientation="landscape"/>
         <activity android:label="Radio Player" android:name="com.nathnetwork.xciptv.RadioPlayerActivity" android:screenOrientation="landscape"/>
-        <activity android:label="Login" android:name="com.nathnetwork.xciptv.LoginActivity" android:screenOrientation="landscape"/>
+        <activity android:label="Login" android:launchMode="singleTask" android:name="com.nathnetwork.xciptv.LoginActivity" android:screenOrientation="landscape"/>
         <activity android:label="Movie Info" android:name="com.nathnetwork.xciptv.MovieInfoActivity" android:screenOrientation="landscape"/>
         <activity android:label="Catch Up Deails" android:name="com.nathnetwork.xciptv.CatchupPlayerActivity" android:screenOrientation="landscape"/>
         <activity android:label="Catch Up Deails" android:name="com.nathnetwork.xciptv.MaintenanceActivity" android:screenOrientation="landscape"/>
