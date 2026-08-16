@@ -1337,11 +1337,7 @@
 
     .line 14
     .line 15
-    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finishAffinity()V
-
-    .line 16
-    .line 17
-    .line 18
+    # Legacy XCIPTV integrity exit disabled for Evolux.
     :cond_0
     const-string v1, "ORT_WHICH_PANEL"
 
@@ -11374,11 +11370,7 @@
 
     .line 240
     .line 241
-    invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
-
-    .line 242
-    .line 243
-    .line 244
+    # Legacy brand mismatch exit disabled for Evolux.
     :cond_7
     return-void
 .end method
