@@ -1334,15 +1334,15 @@
     .line 340
     .line 341
     :goto_2
-    iget-object v2, v0, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->x:Landroid/content/SharedPreferences;
+    iget-object v2, v0, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->A:Lp5/i;
 
     .line 342
     .line 343
-    const-string v10, "portal_vod"
+    iget-object v2, v2, Lp5/i;->e:Ljava/lang/String;
 
     .line 344
     .line 345
-    invoke-interface {v2, v10, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/nathnetwork/xciptv/encryption/Encrypt;->a(Ljava/lang/String;)Ljava/lang/String;
 
     .line 346
     .line 347
@@ -1350,111 +1350,23 @@
     move-result-object v2
 
     .line 349
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 350
-    .line 351
-    .line 352
-    move-result v2
-
-    .line 353
-    if-nez v2, :cond_5
-
-    .line 354
-    .line 355
-    iget-object v2, v0, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->x:Landroid/content/SharedPreferences;
-
-    .line 356
-    .line 357
-    invoke-interface {v2, v10, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 358
-    .line 359
-    .line 360
-    move-result-object v2
-
-    .line 361
-    goto :goto_3
-
-    .line 362
-    :cond_5
-    iget-object v2, v0, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->A:Lp5/i;
-
-    .line 363
-    .line 364
-    iget-object v2, v2, Lp5/i;->e:Ljava/lang/String;
-
-    .line 365
-    .line 366
-    invoke-static {v2}, Lcom/nathnetwork/xciptv/encryption/Encrypt;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 367
-    .line 368
-    .line 369
-    move-result-object v2
-
-    .line 370
     :goto_3
-    iget-object v10, v0, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->x:Landroid/content/SharedPreferences;
+    iget-object v3, v0, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->A:Lp5/i;
 
     .line 371
     .line 372
-    const-string v11, "portal_series"
+    iget-object v3, v3, Lp5/i;->e:Ljava/lang/String;
 
     .line 373
     .line 374
-    invoke-interface {v10, v11, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/nathnetwork/xciptv/encryption/Encrypt;->a(Ljava/lang/String;)Ljava/lang/String;
 
     .line 375
     .line 376
     .line 377
-    move-result-object v10
+    move-result-object v3
 
     .line 378
-    invoke-static {v10, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    .line 379
-    .line 380
-    .line 381
-    move-result v3
-
-    .line 382
-    if-nez v3, :cond_6
-
-    .line 383
-    .line 384
-    iget-object v3, v0, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->x:Landroid/content/SharedPreferences;
-
-    .line 385
-    .line 386
-    invoke-interface {v3, v11, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 387
-    .line 388
-    .line 389
-    move-result-object v3
-
-    .line 390
-    goto :goto_4
-
-    .line 391
-    :cond_6
-    iget-object v3, v0, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->A:Lp5/i;
-
-    .line 392
-    .line 393
-    iget-object v3, v3, Lp5/i;->e:Ljava/lang/String;
-
-    .line 394
-    .line 395
-    invoke-static {v3}, Lcom/nathnetwork/xciptv/encryption/Encrypt;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    .line 396
-    .line 397
-    .line 398
-    move-result-object v3
-
-    .line 399
     :goto_4
     new-instance v10, Ljava/lang/StringBuilder;
 

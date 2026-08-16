@@ -139,7 +139,7 @@
 
     .line 48
     .line 49
-    invoke-virtual {v0, v1}, Lk5/d;->z(Lorg/json/JSONArray;)V
+    invoke-virtual {v0, v1}, Lk5/d;->l(Lorg/json/JSONArray;)V
 
     .line 50
     .line 51
@@ -149,7 +149,7 @@
 
     .line 53
     .line 54
-    const/4 v1, 0x6
+    const/4 v1, 0x5
 
     .line 55
     invoke-direct {v0, v2, v1}, Ls5/f;-><init>(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;I)V
@@ -191,7 +191,7 @@
 
     .line 74
     .line 75
-    invoke-virtual {v0, v1}, Lk5/d;->l(Lorg/json/JSONArray;)V
+    invoke-virtual {v0, v1}, Lk5/d;->z(Lorg/json/JSONArray;)V
 
     .line 76
     .line 77
@@ -201,7 +201,7 @@
 
     .line 79
     .line 80
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
     .line 81
     invoke-direct {v0, v2, v1}, Ls5/f;-><init>(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;I)V
