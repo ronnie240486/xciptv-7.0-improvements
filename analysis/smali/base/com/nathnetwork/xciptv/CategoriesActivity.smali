@@ -11109,10 +11109,11 @@
     .line 106
     .line 107
     const-string v5, "language"
+    const-string v0, "pt"
 
     .line 108
     .line 109
-    invoke-interface {v4, v5, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v4, v5, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 110
     .line 111
