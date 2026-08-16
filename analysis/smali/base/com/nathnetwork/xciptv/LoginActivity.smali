@@ -3553,7 +3553,7 @@
 
     .line 423
     .line 424
-    const-class v2, Lcom/nathnetwork/xciptv/CategoriesActivity;
+    const-class v2, Lcom/nathnetwork/xciptv/SplashActivity;
 
     .line 425
     .line 426
@@ -4382,7 +4382,7 @@
 
     .line 203
     .line 204
-    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 205
     .line 206
@@ -4429,7 +4429,7 @@
     move-result-object v1
 
     .line 228
-    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 229
     .line 230
@@ -4472,7 +4472,7 @@
     move-result-object v1
 
     .line 250
-    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 251
     .line 252
@@ -4515,7 +4515,7 @@
     move-result-object v1
 
     .line 272
-    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 273
     .line 274
@@ -4558,7 +4558,7 @@
     move-result-object v1
 
     .line 294
-    invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v8, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 295
     .line 296
@@ -5127,6 +5127,10 @@
     .line 14
     move-result-object v1
 
+    if-nez v1, :o_panel_ready
+    move-object v1, v3
+    :o_panel_ready
+
     .line 15
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -5283,7 +5287,7 @@
 
     .line 79
     .line 80
-    const/4 v11, 0x0
+    const-string v11, "login"
 
     .line 81
     const-string v12, "login_type"
@@ -6642,7 +6646,7 @@
 
     .line 244
     .line 245
-    const/4 v6, 0x0
+    const-string v6, ""
 
     .line 246
     invoke-interface {v4, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -6992,7 +6996,7 @@
 
     .line 428
     .line 429
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 430
     .line 431
@@ -7180,7 +7184,7 @@
 
     .line 520
     .line 521
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 522
     .line 523
@@ -7207,7 +7211,7 @@
 
     .line 531
     .line 532
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 533
     .line 534
@@ -7234,7 +7238,7 @@
 
     .line 542
     .line 543
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 544
     .line 545
@@ -7390,7 +7394,7 @@
 
     .line 614
     .line 615
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 616
     .line 617
@@ -7544,7 +7548,8 @@
 
     .line 697
     .line 698
-    invoke-interface {v3, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v4, "no"
+    invoke-interface {v3, v5, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 699
     .line 700
@@ -7595,7 +7600,7 @@
 
     .line 724
     .line 725
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 726
     .line 727
@@ -7765,7 +7770,7 @@
     .line 808
     .line 809
     .line 810
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 811
     .line 812
@@ -7797,7 +7802,7 @@
 
     .line 825
     .line 826
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 827
     .line 828
@@ -7887,7 +7892,7 @@
 
     .line 870
     .line 871
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 872
     .line 873
@@ -8166,7 +8171,7 @@
 
     .line 58
     .line 59
-    const/4 v4, 0x0
+    const-string v4, "pt"
 
     .line 60
     invoke-interface {v2, v3, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

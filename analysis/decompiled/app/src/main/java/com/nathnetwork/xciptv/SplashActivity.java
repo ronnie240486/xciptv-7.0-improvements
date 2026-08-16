@@ -489,10 +489,6 @@ public class SplashActivity extends Activity implements e, InterfaceC3313c {
     }
 
     public final void i() {
-        if (this.f20967S) {
-            return;
-        }
-        this.f20967S = true;
         SharedPreferences.Editor edit = this.f20993x.getSharedPreferences(Config.BUNDLE_ID, 0).edit();
         edit.remove("tvvodseries_dl_time");
         edit.remove("epg_dl_time");

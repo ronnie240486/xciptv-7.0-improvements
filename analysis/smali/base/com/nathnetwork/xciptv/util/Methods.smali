@@ -11,8 +11,13 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    # Native library disabled for Evolux recovery build: its JNI_OnLoad aborts on
-    # the reconstructed class layout before any screen can be displayed.
+    .line 1
+    const-string v0, "native-lib"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
     .line 4
     .line 5
     .line 6

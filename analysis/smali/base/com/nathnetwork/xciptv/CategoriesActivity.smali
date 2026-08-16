@@ -140,7 +140,11 @@
     .locals 4
 
     .line 1
-    # Native library disabled for the recovered manual-login build.
+    const-string v0, "native-lib"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     .line 4
     .line 5
@@ -1333,7 +1337,11 @@
 
     .line 14
     .line 15
-    # Legacy XCIPTV integrity exit disabled for Evolux.
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Activity;->finishAffinity()V
+
+    .line 16
+    .line 17
+    .line 18
     :cond_0
     const-string v1, "ORT_WHICH_PANEL"
 
@@ -1617,16 +1625,12 @@
 
     .line 166
     .line 167
-    const-string v8, "VLC"
-
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 168
     .line 169
     .line 170
     move-result-object v4
-
-    const/4 v8, 0x0
 
     .line 171
     const-string v7, "EXO"
@@ -6705,7 +6709,7 @@
 
     .line 645
     .line 646
-    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 647
     .line 648
@@ -6779,7 +6783,7 @@
 
     .line 682
     .line 683
-    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 684
     .line 685
@@ -6841,7 +6845,7 @@
 
     .line 713
     .line 714
-    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 715
     .line 716
@@ -6903,7 +6907,7 @@
 
     .line 744
     .line 745
-    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 746
     .line 747
@@ -6965,7 +6969,7 @@
 
     .line 775
     .line 776
-    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 777
     .line 778
@@ -7027,7 +7031,7 @@
 
     .line 806
     .line 807
-    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 808
     .line 809
@@ -7265,7 +7269,7 @@
     move-result-object v9
 
     .line 928
-    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 929
     .line 930
@@ -7339,7 +7343,7 @@
     move-result-object v9
 
     .line 965
-    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 966
     .line 967
@@ -7413,7 +7417,7 @@
     move-result-object v9
 
     .line 1002
-    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 1003
     .line 1004
@@ -7486,7 +7490,7 @@
     move-result-object v9
 
     .line 1038
-    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 1039
     .line 1040
@@ -7559,7 +7563,7 @@
     move-result-object v9
 
     .line 1074
-    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 1075
     .line 1076
@@ -9750,7 +9754,7 @@
 
     .line 2198
     .line 2199
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 2200
     .line 2201
@@ -9913,7 +9917,7 @@
 
     .line 2277
     .line 2278
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 2279
     .line 2280
@@ -10164,7 +10168,7 @@
 
     .line 2399
     .line 2400
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 2401
     .line 2402
@@ -10419,7 +10423,7 @@
 
     .line 2523
     .line 2524
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     .line 2525
     .line 2526
@@ -11109,7 +11113,6 @@
     .line 106
     .line 107
     const-string v5, "language"
-    const-string v2, "pt"
 
     .line 108
     .line 109
@@ -11371,7 +11374,11 @@
 
     .line 240
     .line 241
-    # Legacy brand mismatch exit disabled for Evolux.
+    invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
+
+    .line 242
+    .line 243
+    .line 244
     :cond_7
     return-void
 .end method
