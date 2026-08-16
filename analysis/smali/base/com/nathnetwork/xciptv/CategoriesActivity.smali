@@ -1617,12 +1617,16 @@
 
     .line 166
     .line 167
+    const-string v8, "VLC"
+
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     .line 168
     .line 169
     .line 170
     move-result-object v4
+
+    const/4 v8, 0x0
 
     .line 171
     const-string v7, "EXO"
