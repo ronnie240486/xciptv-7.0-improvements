@@ -86,3 +86,11 @@ A API global `get_vod_streams` da lista atual permanece transmitindo um JSON mui
 O watchdog de `XCUpdateContents` também foi corrigido: ele era criado com o código `0`, ramo que apenas marcava Live TV. Agora começa no código `6`, verifica as seis flags, aplica o timeout de dez ciclos e libera a tela mesmo se alguma requisição falhar. O callback de `list-vod` continua usando o ramo VOD correto, que grava `vods` e marca `H=true`.
 
 SHA-256 desta build: `c11794e35d61d9e348a93e8d23e1d26a083e1bae19c85ea3873e7a13c7143d90`.
+
+## Prioridade de abertura e VOD em segundo plano
+
+A tela de atualização não espera mais VOD e séries para abrir os catálogos. O watchdog agora libera `XCUpdateContents` assim que a flag de Live TV (`G`) é concluída; a carga de filmes e séries continua em segundo plano. Isso evita que uma resposta VOD lenta bloqueie canais, séries, player e navegação.
+
+A consulta inicial VOD continua limitada à categoria `208`, que respondeu com JSON completo, e o dispatcher mantém o ramo correto de VOD para gravar `vods` e atualizar a flag `H` quando a carga termina.
+
+SHA-256 desta build: `ed6a9f41d0bdf59e26c2752a7dd5c7b823e5874bc83660e8eef81fb85d58ff97`.
