@@ -204,3 +204,11 @@ SHA-256 desta build: `f3da8b2eaa3a628a25669a3cfb1ea03f2d808c4d0df057c33cad8fd68d
 O player usa `eH.p()` para descriptografar `ORT_PROFILE_SERVER`, `ORT_PROFILE_USERNAME` e `ORT_PROFILE_PASSWORD`; esses três campos são salvos com `Encrypt.b()`. Já `ORT_WHICH_PANEL` é comparado diretamente pelo player e permanece como texto puro `xtreamcodes`. Essa separação evita URL inválida e seleção de painel incompatível.
 
 SHA-256 desta build: `944263e8bb37e94aa36971de14c7c486c19ee5f07372be8f16d4872b2c13eeaf`.
+
+## Correção do formato padrão dos streams
+
+Os métodos de abertura inicial e troca de canal consultavam `streamFormat` com valor padrão nulo. Quando a preferência não existia, a URL podia ser montada com extensão inválida. Ambos os caminhos agora usam `ts` como padrão; `m3u8` continua disponível quando explicitamente configurado.
+
+A keystore de desenvolvimento precisou ser recriada após o reset do ambiente. Esta APK exige instalação limpa.
+
+SHA-256 desta build: `8acf8f12ab7e43000fb6207ee15a1a5ab2a386c3040f7006e5d474aafe976d73`.
