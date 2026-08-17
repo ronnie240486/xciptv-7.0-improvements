@@ -172,3 +172,9 @@ As conversões de data que ainda usavam `GMT-4` foram alteradas para `TimeZone.g
 Não foi encontrada leitura térmica existente no APK. A temperatura só poderá ser exibida se a TV Box expuser um sensor ao Android; nenhum valor será inventado.
 
 SHA-256 desta build: `dbe2257013a8e972bd61653a349e94065391cd9d5972088ec7efac648ae7b8c5`.
+
+## Correção do heartbeat pelo MAC persistido
+
+O heartbeat de `CategoriesActivity` estava lendo `mac` de `u5/a`, enquanto o login MAC salvava o identificador em `SharedPreferences`. Como resultado, a rotina não encontrava MAC e não enviava presença ao painel. Agora `sendPresence()` lê a chave `mac` de `CategoriesActivity.y`, normaliza para maiúsculas e envia a rota Rencia a cada 60 segundos. O fluxo de Live TV, VOD e séries não foi alterado.
+
+SHA-256 desta build: `0ccc1ffe8223ec2024bb1770035ae484ec4064c964d6125d178d7e7fdfa2269e`.
