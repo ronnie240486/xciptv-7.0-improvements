@@ -218,3 +218,9 @@ SHA-256 desta build: `8acf8f12ab7e43000fb6207ee15a1a5ab2a386c3040f7006e5d474aafe
 This build derives the Evolux panel identifier from Android Settings.Secure.ANDROID_ID when the app MAC preference is empty. It formats the last 12 hexadecimal characters as six uppercase pairs separated by hyphens and stores the result in the app MAC preference. Configuration polling, category heartbeat, player heartbeat, current-content reporting, and playback-failure reporting use the same persisted identifier. This identifier is stable across ordinary app uninstall/reinstall on the same Android TV Box, subject to Android factory reset, user/profile changes, or device firmware behavior. The new identifier must be registered once in the Rencia panel under app_id=evolux.
 
 Final APK SHA-256: `32a059c956d6448646077eabe3f64c38c7f9ff0f41d101aa1cc1f545a41c77da`.
+
+## Live TV player-only correction
+
+Restored the pre-stable-ID login/profile baseline so MAC authentication, VOD, and series behavior are unchanged. The only Live TV change is in the channel click path: `direct_source` is bypassed and the same authenticated Xtream `/live/{username}/{password}/{stream_id}.{streamFormat}` construction used by the working catalog flow is passed to the existing ExoPlayer/VLC methods. No login, MAC, heartbeat, VOD, or series logic was changed in this build.
+
+Final APK SHA-256: `f44e68e4e292e6a57ec9fb55bb84b18cf4efdfae71a02898fe37a863395fcc90`.
