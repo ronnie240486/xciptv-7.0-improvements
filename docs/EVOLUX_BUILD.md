@@ -158,3 +158,9 @@ SHA-256 desta build: `fd82ccb5d8d1b88d8f4593806ded5758d69bbf7a5add20a5a981daf59f
 A build diagnóstica anterior inseriu uma chamada `Toast.makeText` usando o objeto `util.d` como `Context`, causando `VerifyError` no método `util.b.a`. A chamada foi removida; permanece apenas o `Log.d` seguro do tag do catálogo. O fallback de timezone `GMT-3` e o fluxo `whichPanel=xtreamcodes` foram mantidos.
 
 SHA-256 desta build: `375ae89c8be713e930269310ade7c1cddaec6983370c9a550d67135065e499e9`.
+
+## VOD e séries reativados após estabilização do MAC
+
+Depois de corrigir `whichPanel=xtreamcodes`, o fallback de timezone e o VerifyError do callback, o carregamento original de `cat-vod`, `cat-series`, `list-vod` e `list-series` foi restaurado. A tela completa volta a exibir e processar Live TV, VOD, séries e EPG. O MAC/Rencia continua sendo usado somente para autorizar e fornecer a configuração da playlist.
+
+SHA-256 desta build: `5a4c7c7064f407d51922c75842eac97d4ef0d0ba00f84677c66696170767cb87`.
