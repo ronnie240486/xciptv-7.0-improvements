@@ -45,7 +45,7 @@
 
     .line 4
     .line 5
-    const-string v1, "ORT_WHICH_PLAYER"
+    const-string v1, "whichplayer_tv"
 
     .line 6
     .line 7

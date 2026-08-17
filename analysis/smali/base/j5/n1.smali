@@ -1459,7 +1459,15 @@
     goto :evolux_vod_legacy
 
 :evolux_check_exo
-    const-string v9, "ORT_WHICH_PLAYER"
+    const-string v9, "whichplayer_vod"
+    const-string v1, "VOD"
+    invoke-static {v8, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result v5
+    if-eqz v5, :evolux_player_series_key
+    goto :evolux_player_key_ready
+:evolux_player_series_key
+    const-string v9, "whichplayer_series"
+:evolux_player_key_ready
     const-string v1, "EXO"
     invoke-static {}, Lcom/google/android/gms/internal/ads/Cv;->M()Lu5/a;
     move-result-object v2

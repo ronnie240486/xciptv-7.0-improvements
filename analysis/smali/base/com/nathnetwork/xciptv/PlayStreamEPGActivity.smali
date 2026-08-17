@@ -3694,7 +3694,7 @@
     .locals 4
 
     .line 1
-    const-string v0, "ORT_WHICH_PLAYER"
+    const-string v0, "whichplayer_tv"
 
     .line 2
     .line 3
@@ -4637,7 +4637,7 @@
     .locals 9
 
     .line 1
-    const-string v0, "ORT_WHICH_PLAYER"
+    const-string v0, "whichplayer_tv"
 
     .line 2
     .line 3
@@ -5320,7 +5320,7 @@
     .locals 9
 
     .line 1
-    const-string v0, "ORT_WHICH_PLAYER"
+    const-string v0, "whichplayer_tv"
 
     .line 2
     .line 3
@@ -6263,7 +6263,7 @@
     .locals 5
 
     .line 1
-    const-string v0, "ORT_WHICH_PLAYER"
+    const-string v0, "whichplayer_tv"
 
     .line 2
     .line 3
@@ -6648,7 +6648,7 @@
     .locals 8
 
     .line 1
-    const-string v0, "ORT_WHICH_PLAYER"
+    const-string v0, "whichplayer_tv"
 
     .line 2
     .line 3
@@ -7095,7 +7095,7 @@
     .locals 10
 
     .line 1
-    const-string v0, "ORT_WHICH_PLAYER"
+    const-string v0, "whichplayer_tv"
 
     .line 2
     .line 3
@@ -7635,7 +7635,7 @@
     .locals 5
 
     .line 1
-    const-string v0, "ORT_WHICH_PLAYER"
+    const-string v0, "whichplayer_tv"
 
     .line 2
     .line 3
@@ -25131,12 +25131,8 @@
     move-result-object v5
 
     .line 81
-    invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    .line 82
-    .line 83
-    .line 84
-    move-result v5
+    # Evolux: consultar epgdb sempre; a preferência antiga não pode ocultar o EPG.
+    const/4 v5, 0x1
 
     .line 85
     const/4 v6, 0x4

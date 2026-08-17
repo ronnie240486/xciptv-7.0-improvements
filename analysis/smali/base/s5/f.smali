@@ -530,17 +530,23 @@
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     iget v0, v6, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->T:I
+
     add-int/lit8 v0, v0, 0x1
+
     iput v0, v6, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->T:I
+
     const/16 v11, 0xa
-    if-lt v0, v11, :timeout_continue
+
+    if-lt v0, v11, :cond_0
+
     invoke-static {v6}, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->a(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;)V
+
     return-void
 
-    :timeout_continue
     .line 253
     .line 254
     .line 255
+    :cond_0
     const-string v0, "HANDLER running ---------------checkShouldFinish()"
 
     .line 256
@@ -554,7 +560,7 @@
 
     .line 261
     .line 262
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 263
     .line 264
@@ -562,7 +568,7 @@
 
     .line 265
     .line 266
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 267
     .line 268
@@ -570,7 +576,7 @@
 
     .line 269
     .line 270
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 271
     .line 272
@@ -578,7 +584,7 @@
 
     .line 273
     .line 274
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 275
     .line 276
@@ -586,7 +592,7 @@
 
     .line 277
     .line 278
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 279
     .line 280
@@ -594,7 +600,7 @@
 
     .line 281
     .line 282
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     .line 283
     .line 284
@@ -605,7 +611,7 @@
     const/4 v8, 0x0
 
     .line 287
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     .line 288
     .line 289
@@ -631,10 +637,9 @@
     .line 299
     .line 300
     .line 301
-    :cond_0
+    :cond_1
+    # Evolux: abrir os conteúdos, mas continuar o fluxo XMLTV em segundo plano.
     invoke-static {v6}, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->a(Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;)V
-
-    return-void
 
     const-string v0, "yes"
 
@@ -733,7 +738,7 @@
     move-result v9
 
     .line 352
-    if-eqz v9, :cond_2
+    if-eqz v9, :cond_3
 
     .line 353
     .line 354
@@ -832,7 +837,7 @@
     move-result v0
 
     .line 405
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     .line 406
     .line 407
@@ -840,7 +845,7 @@
 
     .line 408
     .line 409
-    :cond_1
+    :cond_2
     invoke-static {v10}, Ls5/e;->b(Landroid/content/Context;)V
 
     .line 410
@@ -863,7 +868,7 @@
     goto :goto_0
 
     .line 421
-    :cond_2
+    :cond_3
     const-string v0, "----------------------downloadXMLTV"
 
     .line 422
@@ -904,7 +909,7 @@
     .line 441
     .line 442
     .line 443
-    :cond_3
+    :cond_4
     :goto_0
     iget-object v0, v6, Lcom/nathnetwork/xciptv/updatecontents/XCUpdateContents;->Q:Landroid/os/Handler;
 
