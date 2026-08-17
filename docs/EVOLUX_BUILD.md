@@ -224,3 +224,9 @@ Final APK SHA-256: `32a059c956d6448646077eabe3f64c38c7f9ff0f41d101aa1cc1f545a41c
 Restored the pre-stable-ID login/profile baseline so MAC authentication, VOD, and series behavior are unchanged. The only Live TV change is in the channel click path: `direct_source` is bypassed and the same authenticated Xtream `/live/{username}/{password}/{stream_id}.{streamFormat}` construction used by the working catalog flow is passed to the existing ExoPlayer/VLC methods. No login, MAC, heartbeat, VOD, or series logic was changed in this build.
 
 Final APK SHA-256: `f44e68e4e292e6a57ec9fb55bb84b18cf4efdfae71a02898fe37a863395fcc90`.
+
+## MAC profile regression correction
+
+This build keeps the pre-regression MAC-only login and catalog/player behavior. Before the Evolux configuration request, it synchronizes the current device identifier from `Config.a` into the `mac` preference, normalizing separators to hyphens, so a stale identifier left by a previous build cannot cause `Server configuration unavailable`. It does not force user/password login and does not change VOD, series, heartbeat, or player logic.
+
+Final APK SHA-256: `79059483a438b0b7754817a2b056b1cca6946979e6b0f27bfa6aa70e139f55a1`.
