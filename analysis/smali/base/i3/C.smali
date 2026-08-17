@@ -1520,17 +1520,16 @@
 
     .line 658
     .line 659
-    const v15, 0x7f08060f
+    const/4 v15, 0x0
 
     .line 660
     .line 661
     .line 662
-    invoke-static {v0, v3, v15}, Ll3/M;->u(Landroid/content/Context;Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
+    # Speed-control icon intentionally omitted: the original resource was invalid on MIUI.
 
     .line 663
     .line 664
     .line 665
-    move-result-object v15
 
     .line 666
     move/from16 v22, v14
