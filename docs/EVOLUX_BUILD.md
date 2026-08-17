@@ -78,3 +78,11 @@ Foi corrigido o hook de presença em `CategoriesActivity`: o início do heartbea
 Também foi corrigido o dispatcher de sucesso de `list-vod`. O callback estava encaminhando a resposta para o código de séries; por isso os filmes podiam ser processados sem postar a conclusão da flag `H`, deixando a tela presa em `Updating...`. O callback agora usa o ramo VOD correto, que grava `vods` e executa `s5/f(4)` para marcar VOD como concluído.
 
 SHA-256 da build: `c2a37336ba6a5ee76e88cf11e9ed7e1e1e32224b1519273317a213800181b3e6`.
+
+## Correção do travamento de VOD
+
+A API global `get_vod_streams` da lista atual permanece transmitindo um JSON muito grande e incompleto por mais de dois minutos, impedindo que o Volley entregue uma resposta válida ao APK. A primeira consulta VOD agora usa `category_id=208`, uma categoria real do painel que respondeu em aproximadamente 6,5 segundos e retornou JSON completo. O carregamento inicial deixa de depender do endpoint global interminável.
+
+O watchdog de `XCUpdateContents` também foi corrigido: ele era criado com o código `0`, ramo que apenas marcava Live TV. Agora começa no código `6`, verifica as seis flags, aplica o timeout de dez ciclos e libera a tela mesmo se alguma requisição falhar. O callback de `list-vod` continua usando o ramo VOD correto, que grava `vods` e marca `H=true`.
+
+SHA-256 desta build: `c11794e35d61d9e348a93e8d23e1d26a083e1bae19c85ea3873e7a13c7143d90`.
