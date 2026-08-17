@@ -58,3 +58,9 @@ Nesta revisão, o LoginActivity consulta `GET https://renciaapp.manus.space/api/
 Após a autorização, o APK salva a configuração recebida, interrompe o polling e abre `CategoriesActivity` automaticamente. O usuário não precisa pressionar Refresh. O fluxo também ganhou uma barreira adicional em `LoginActivity.c()`, `LoginActivity.p()`, `j5.N` e `j5.S`: quando `login_type=mac`, nenhuma dessas rotinas pode tentar validar ou enviar servidor, username e password como login manual. Os campos `username` e `password` da resposta Rencia continuam sendo usados somente internamente para montar a playlist Xtream quando necessário.
 
 O novo artefato assinado foi gerado em `build_evolux_mac_poll_5s/signed/evolux-aligned-signed.apk`. A assinatura v1/v2/v3 e a integridade ZIP foram verificadas. SHA-256: `de84f8fcee8690225ba36392efbcdc58dc6257677a2f2c75b0956821f03e8474`.
+
+## Correção do erro Server configuration unavailable
+
+A resposta real do painel para o MAC autorizado retorna `allowed=true`, `app_id=evolux`, `server_api_url` vazio e `playlist_urls` como um array de strings, por exemplo `http://servidor/get.php?...`. O parser anterior aceitava apenas objetos contendo a chave `playlist_url`, descartava a string e bloqueava a entrada. O parser agora aceita os dois formatos e deriva automaticamente `server_api_url` do esquema e domínio da URL da playlist quando o campo do painel estiver vazio.
+
+SHA-256 desta correção: `a7b460f4fd1f459a6df60744ce774130a4e87c1f0c139537b61c595768dd52ee`.
