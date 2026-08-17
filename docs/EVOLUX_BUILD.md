@@ -164,3 +164,11 @@ SHA-256 desta build: `375ae89c8be713e930269310ade7c1cddaec6983370c9a550d67135065
 Depois de corrigir `whichPanel=xtreamcodes`, o fallback de timezone e o VerifyError do callback, o carregamento original de `cat-vod`, `cat-series`, `list-vod` e `list-series` foi restaurado. A tela completa volta a exibir e processar Live TV, VOD, séries e EPG. O MAC/Rencia continua sendo usado somente para autorizar e fornecer a configuração da playlist.
 
 SHA-256 desta build: `5a4c7c7064f407d51922c75842eac97d4ef0d0ba00f84677c66696170767cb87`.
+
+## Relógio e fuso da TV Box
+
+As conversões de data que ainda usavam `GMT-4` foram alteradas para `TimeZone.getDefault()`, fazendo o APK respeitar o horário e o fuso configurados no Android da própria TV Box. O fallback `GMT-3` permanece apenas para a preferência de timezone ausente no fluxo MAC, evitando o crash sem impor um horário ao dispositivo quando houver configuração local disponível.
+
+Não foi encontrada leitura térmica existente no APK. A temperatura só poderá ser exibida se a TV Box expuser um sensor ao Android; nenhum valor será inventado.
+
+SHA-256 desta build: `dbe2257013a8e972bd61653a349e94065391cd9d5972088ec7efac648ae7b8c5`.
