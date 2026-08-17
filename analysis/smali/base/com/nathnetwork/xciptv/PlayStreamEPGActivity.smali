@@ -827,7 +827,8 @@
     move-result-object v0
 
     .line 58
-    const-string v1, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v1
 
     .line 59
     .line 60
@@ -1892,7 +1893,8 @@
 
     .line 219
     .line 220
-    const-string v2, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v2
 
     .line 221
     .line 222
@@ -4224,7 +4226,8 @@
     move-result-object v0
 
     .line 23
-    const-string v1, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v1
 
     .line 24
     .line 25
@@ -8212,7 +8215,8 @@
     move-result-object v1
 
     .line 26
-    const-string v5, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v5
 
     .line 27
     .line 28
@@ -8861,7 +8865,8 @@
     move-result-object v1
 
     .line 14
-    const-string v2, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v2
 
     .line 15
     .line 16
@@ -11626,7 +11631,8 @@
 
     .line 8
     .line 9
-    const-string v5, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v5
 
     .line 10
     .line 11
@@ -15902,7 +15908,8 @@
 
     .line 1518
     .line 1519
-    const-string v8, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v8
 
     .line 1520
     .line 1521
@@ -18975,7 +18982,8 @@
 
     .line 47
     .line 48
-    const-string v13, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v13
 
     .line 49
     .line 50
@@ -20308,7 +20316,8 @@
     move-result-object v0
 
     .line 18
-    const-string v1, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v1
 
     .line 19
     .line 20
@@ -24008,7 +24017,8 @@
     move-result-object v0
 
     .line 295
-    const-string v1, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v1
 
     .line 296
     .line 297
@@ -24113,7 +24123,8 @@
     move-result-object v0
 
     .line 8
-    const-string v1, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v1
 
     .line 9
     .line 10
@@ -24437,7 +24448,8 @@
     move-result-object v0
 
     .line 8
-    const-string v1, "ORT_WHICH_PLAYER"
+    invoke-virtual/range {p0 .. p0}, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->aa()Ljava/lang/String;
+    move-result-object v1
 
     .line 9
     .line 10
@@ -27161,4 +27173,41 @@
     .line 66
     .line 67
     return-void
+.end method
+
+
+.method public final aa()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ORT_WHICH_CAT"
+    const-string v1, "TV"
+    const-string v2, "VOD"
+    invoke-static {}, Lcom/google/android/gms/internal/ads/Cv;->M()Lu5/a;
+    move-result-object v3
+    invoke-virtual {v3, v0, v1}, Lu5/a;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result v3
+    if-eqz v3, :aa_check_series
+    const-string v0, "whichplayer_vod"
+    goto :aa_read
+
+:aa_check_series
+    const-string v2, "SERIES"
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result v3
+    if-eqz v3, :aa_tv
+    const-string v0, "whichplayer_series"
+    goto :aa_read
+
+:aa_tv
+    const-string v0, "whichplayer_tv"
+
+:aa_read
+    const-string v1, "EXO"
+    invoke-static {}, Lcom/google/android/gms/internal/ads/Cv;->M()Lu5/a;
+    move-result-object v2
+    invoke-virtual {v2, v0, v1}, Lu5/a;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+    return-object v0
 .end method
