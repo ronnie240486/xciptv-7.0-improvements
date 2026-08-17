@@ -192,3 +192,9 @@ SHA-256 desta build: `e850e577e1eac99dfe894ee67b6b59ab6f55bb792eb6e003a0efa8bca8
 A rota específica do Evolux reconhece o MAC deste dispositivo no formato `F2-70-6B-5C-F6-D3`. A build normaliza os dois-pontos recebidos do Android para hífens antes de consultar configuração, enviar heartbeat, informar conteúdo assistido e reportar falhas de reprodução. O formato visual no aparelho permanece inalterado.
 
 SHA-256 desta build: `4c3ca737aa0533d9a3c17fcb1b84c0385c63bf0197090ea99ebe22638a5b8732`.
+
+## Correção da URL de canais e tela preta
+
+A API Xtream respondeu corretamente para o canal A&E FHD em `/live/{username}/{password}/308514.ts`. A tela preta era causada pelo perfil MAC salvo em texto puro no armazenamento global, enquanto `eH.p` descriptografa `ORT_PROFILE_SERVER`, `ORT_PROFILE_USERNAME`, `ORT_PROFILE_PASSWORD` e `ORT_WHICH_PANEL` antes de o player montar a URL. A build agora salva esses quatro campos usando `Encrypt.b()`, mantendo o formato criptografado esperado pelo player.
+
+SHA-256 desta build: `f3da8b2eaa3a628a25669a3cfb1ea03f2d808c4d0df057c33cad8fd68dc85728`.
