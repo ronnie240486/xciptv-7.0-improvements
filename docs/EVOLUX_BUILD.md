@@ -94,3 +94,11 @@ A tela de atualização não espera mais VOD e séries para abrir os catálogos.
 A consulta inicial VOD continua limitada à categoria `208`, que respondeu com JSON completo, e o dispatcher mantém o ramo correto de VOD para gravar `vods` e atualizar a flag `H` quando a carga termina.
 
 SHA-256 desta build: `ed6a9f41d0bdf59e26c2752a7dd5c7b823e5874bc83660e8eef81fb85d58ff97`.
+
+## Varredura completa do fluxo de catálogos
+
+Foi identificado que a tela não dependia apenas de VOD: o callback de `list-vod` estava sendo encaminhado para o código 5 de `s5/g`, que grava `tv_category`, e não para o código 3, que chama `k5/d.C` para gravar `vods` e marca `H=true`. O dispatcher foi corrigido preservando o inteiro 3 em um registrador separado.
+
+Também foi identificado que concluir Live TV ainda passava por uma conclusão indireta que podia permanecer em EPG/ORT_PROCESS_STATUS. O watchdog agora chama diretamente `CategoriesActivity.m(context)` assim que `G=true` e finaliza `XCUpdateContents`; VOD e séries continuam em segundo plano.
+
+SHA-256 desta build: `5dc591b7c7d846825ba4f72bdfd1f2848081a9e20d905cb13c39310a3fd682d6`.
