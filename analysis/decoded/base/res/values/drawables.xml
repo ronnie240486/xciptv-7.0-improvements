@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="drawable" name="exo_styled_controls_audiotrack">@null</item>
-    <item type="drawable" name="exo_styled_controls_check">@null</item>
-    <item type="drawable" name="exo_styled_controls_fastforward">@null</item>
-    <item type="drawable" name="exo_styled_controls_fullscreen_enter">@null</item>
-    <item type="drawable" name="exo_styled_controls_fullscreen_exit">@null</item>
-    <item type="drawable" name="exo_styled_controls_next">@null</item>
-    <item type="drawable" name="exo_styled_controls_overflow_hide">@null</item>
-    <item type="drawable" name="exo_styled_controls_overflow_show">@null</item>
-    <item type="drawable" name="exo_styled_controls_pause">@null</item>
-    <item type="drawable" name="exo_styled_controls_play">@null</item>
-    <item type="drawable" name="exo_styled_controls_previous">@null</item>
-    <item type="drawable" name="exo_styled_controls_repeat_all">@null</item>
-    <item type="drawable" name="exo_styled_controls_repeat_off">@null</item>
-    <item type="drawable" name="exo_styled_controls_repeat_one">@null</item>
-    <item type="drawable" name="exo_styled_controls_rewind">@null</item>
-    <item type="drawable" name="exo_styled_controls_settings">@null</item>
-    <item type="drawable" name="exo_styled_controls_shuffle_off">@null</item>
-    <item type="drawable" name="exo_styled_controls_shuffle_on">@null</item>
-    <item type="drawable" name="exo_styled_controls_speed">@null</item>
-    <item type="drawable" name="exo_styled_controls_subtitle_off">@null</item>
-    <item type="drawable" name="exo_styled_controls_subtitle_on">@null</item>
-    <item type="drawable" name="exo_styled_controls_vr">@null</item>
+    <item type="drawable" name="exo_styled_controls_audiotrack">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_check">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_fastforward">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_fullscreen_enter">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_fullscreen_exit">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_next">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_overflow_hide">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_overflow_show">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_pause">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_play">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_previous">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_repeat_all">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_repeat_off">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_repeat_one">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_rewind">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_settings">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_shuffle_off">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_shuffle_on">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_speed">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_subtitle_off">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_subtitle_on">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_vr">#00000000</item>
     <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
     <item type="drawable" name="notification_template_icon_low_bg">#0cffffff</item>
 </resources>

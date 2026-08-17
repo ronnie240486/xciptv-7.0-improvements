@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <drawable name="exo_styled_controls_audiotrack">?unknown_ref: 7f0805d3</drawable>
-    <drawable name="exo_styled_controls_check">?unknown_ref: 7f0805d4</drawable>
-    <drawable name="exo_styled_controls_fastforward">?unknown_ref: 7f0805d8</drawable>
-    <drawable name="exo_styled_controls_fullscreen_enter">?unknown_ref: 7f0805d9</drawable>
-    <drawable name="exo_styled_controls_fullscreen_exit">?unknown_ref: 7f0805da</drawable>
-    <drawable name="exo_styled_controls_next">?unknown_ref: 7f0805df</drawable>
-    <drawable name="exo_styled_controls_overflow_hide">?unknown_ref: 7f0805d5</drawable>
-    <drawable name="exo_styled_controls_overflow_show">?unknown_ref: 7f0805d6</drawable>
-    <drawable name="exo_styled_controls_pause">?unknown_ref: 7f0805db</drawable>
-    <drawable name="exo_styled_controls_play">?unknown_ref: 7f0805dc</drawable>
-    <drawable name="exo_styled_controls_previous">?unknown_ref: 7f0805e0</drawable>
-    <drawable name="exo_styled_controls_repeat_all">?unknown_ref: 7f0805ec</drawable>
-    <drawable name="exo_styled_controls_repeat_off">?unknown_ref: 7f0805ed</drawable>
-    <drawable name="exo_styled_controls_repeat_one">?unknown_ref: 7f0805ee</drawable>
-    <drawable name="exo_styled_controls_rewind">?unknown_ref: 7f0805dd</drawable>
-    <drawable name="exo_styled_controls_settings">?unknown_ref: 7f0805de</drawable>
-    <drawable name="exo_styled_controls_shuffle_off">?unknown_ref: 7f0805f0</drawable>
-    <drawable name="exo_styled_controls_shuffle_on">?unknown_ref: 7f0805f1</drawable>
-    <drawable name="exo_styled_controls_speed">?unknown_ref: 7f0805e1</drawable>
-    <drawable name="exo_styled_controls_subtitle_off">?unknown_ref: 7f0805e2</drawable>
-    <drawable name="exo_styled_controls_subtitle_on">?unknown_ref: 7f0805e3</drawable>
-    <drawable name="exo_styled_controls_vr">?unknown_ref: 7f0805f3</drawable>
-    <drawable name="notification_template_icon_bg">#3333b5e5</drawable>
-    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+    <item type="drawable" name="exo_styled_controls_audiotrack">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_check">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_fastforward">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_fullscreen_enter">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_fullscreen_exit">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_next">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_overflow_hide">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_overflow_show">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_pause">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_play">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_previous">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_repeat_all">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_repeat_off">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_repeat_one">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_rewind">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_settings">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_shuffle_off">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_shuffle_on">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_speed">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_subtitle_off">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_subtitle_on">#00000000</item>
+    <item type="drawable" name="exo_styled_controls_vr">#00000000</item>
+    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
+    <item type="drawable" name="notification_template_icon_low_bg">#0cffffff</item>
 </resources>
