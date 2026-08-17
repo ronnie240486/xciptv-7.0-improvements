@@ -186,3 +186,9 @@ O callback MAC agora copia `ORT_PROFILE_SERVER`, `ORT_PROFILE_USERNAME`, `ORT_PR
 O heartbeat do player passou a ler o MAC persistido e a enviar `current_content` com o título atual (`A`) codificado na URL, conforme o PDF. O envio ocorre ao abrir/trocar o conteúdo e no ciclo de 60 segundos. O reporte de falha nativa também passa a usar o MAC persistido.
 
 SHA-256 desta build: `e850e577e1eac99dfe894ee67b6b59ab6f55bb792eb6e003a0efa8bca8ed28b5`.
+
+## Normalização de MAC do painel Evolux
+
+A rota específica do Evolux reconhece o MAC deste dispositivo no formato `F2-70-6B-5C-F6-D3`. A build normaliza os dois-pontos recebidos do Android para hífens antes de consultar configuração, enviar heartbeat, informar conteúdo assistido e reportar falhas de reprodução. O formato visual no aparelho permanece inalterado.
+
+SHA-256 desta build: `4c3ca737aa0533d9a3c17fcb1b84c0385c63bf0197090ea99ebe22638a5b8732`.
