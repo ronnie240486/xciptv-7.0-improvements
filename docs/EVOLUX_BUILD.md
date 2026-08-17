@@ -140,3 +140,9 @@ SHA-256 desta build: `f9e90e3ae5258125786b3c0cafcedcfbe44d25e948c50a67d7fc59a0f6
 A build de isolamento agora não apenas ignora as requisições VOD e séries: os blocos visuais `VOD` e `SERIES` também estão com `visibility="gone"` no layout `activity_update_contents.xml`. Se a APK correta estiver instalada, a tela de atualização exibirá somente Live TV e EPG; não será possível aparecer `VOD — Updating...`.
 
 SHA-256 desta build: `345f186955e2a18630d36f0a3076189d23a1c9d81e77beff77174d6a3a718cf1`.
+
+## Correção do fluxo MAC para Xtream original
+
+O callback MAC estava salvando `whichPanel=ezserver`, fazendo a playlist Xtream autorizada abrir `EZServerUpdateContents`, diferente do fluxo manual que usava `XCUpdateContents`. A correção mantém a autenticação MAC e grava `whichPanel=xtreamcodes`, reutilizando a mesma rotina pré-MAC de atualização de catálogos.
+
+SHA-256 desta build: `155b34650eed0e36c4028dec0abad9b37974e94c74a9512c70715d000d0f4832`.
