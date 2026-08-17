@@ -1426,7 +1426,7 @@
 .end method
 
 .method public final b(Ljava/lang/Void;)V
-    .locals 9
+    .locals 10
 
     .line 1
     iget v0, p0, Lj5/n1;->a:I
@@ -1444,13 +1444,13 @@
     goto :evolux_vod_legacy
 
 :evolux_check_exo
-    const-string v0, "ORT_WHICH_PLAYER"
+    const-string v9, "ORT_WHICH_PLAYER"
     const-string v1, "EXO"
     invoke-static {}, Lcom/google/android/gms/internal/ads/Cv;->M()Lu5/a;
     move-result-object v2
-    invoke-virtual {v2, v0, v1}, Lu5/a;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v9, v1}, Lu5/a;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     move-result-object v2
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
     move-result v2
     if-eqz v2, :evolux_check_vlc
     iget-object v2, v3, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->C:Ljava/lang/String;
@@ -1461,9 +1461,9 @@
     const-string v1, "VLC"
     invoke-static {}, Lcom/google/android/gms/internal/ads/Cv;->M()Lu5/a;
     move-result-object v2
-    invoke-virtual {v2, v0, v1}, Lu5/a;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v9, v1}, Lu5/a;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     move-result-object v2
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
     move-result v2
     if-eqz v2, :evolux_vod_legacy
     iget-object v2, v3, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->C:Ljava/lang/String;
