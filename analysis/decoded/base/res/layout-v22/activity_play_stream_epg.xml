@@ -18,7 +18,7 @@
     </FrameLayout>
     <FrameLayout android:layout_gravity="left" android:id="@id/layout_playerview_holder" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr">
         <SurfaceView android:id="@id/surfaceView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-        <com.google.android.exoplayer2.ui.StyledPlayerView android:id="@id/exo_player_view" android:background="#ff000000" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:use_controller="true" />
+        <com.google.android.exoplayer2.ui.StyledPlayerView android:id="@id/exo_player_view" android:background="#ff000000" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:use_controller="false" />
         <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="48.0dip" android:layout_height="48.0dip" />
         <ImageView android:layout_gravity="center|right|top" android:id="@id/img_recording_logo" android:background="@drawable/recording_icon" android:layout_width="80.0dip" android:layout_height="34.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" />
     </FrameLayout>
@@ -117,6 +117,6 @@
     <TextView android:layout_gravity="center|right|top" android:id="@id/debug_text_view" android:background="#ff131313" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="Debugging Text" />
     <FrameLayout android:id="@id/AdOverlayView" android:background="#ff514f4f" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <TextView android:textSize="150.0sp" android:layout_gravity="center" android:id="@id/textView14" android:paddingBottom="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AD" android:alpha="0.1" android:fontFamily="sans-serif" />
-        <com.google.android.exoplayer2.ui.StyledPlayerView android:id="@id/exo_player_view_ad" android:background="#ff050505" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:use_controller="true" />
+        <com.google.android.exoplayer2.ui.StyledPlayerView android:id="@id/exo_player_view_ad" android:background="#ff050505" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:use_controller="false" />
     </FrameLayout>
 </FrameLayout>
