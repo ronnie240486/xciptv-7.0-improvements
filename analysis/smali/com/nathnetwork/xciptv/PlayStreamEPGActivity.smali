@@ -11824,7 +11824,7 @@
 
     .line 99
     .line 100
-    invoke-direct {v3, p0, v1}, Lj5/m1;-><init>(Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;I)V
+    invoke-direct {v3, p0, v2}, Lj5/m1;-><init>(Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;I)V
 
     .line 101
     .line 102
