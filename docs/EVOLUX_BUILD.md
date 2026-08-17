@@ -64,3 +64,9 @@ O novo artefato assinado foi gerado em `build_evolux_mac_poll_5s/signed/evolux-a
 A resposta real do painel para o MAC autorizado retorna `allowed=true`, `app_id=evolux`, `server_api_url` vazio e `playlist_urls` como um array de strings, por exemplo `http://servidor/get.php?...`. O parser anterior aceitava apenas objetos contendo a chave `playlist_url`, descartava a string e bloqueava a entrada. O parser agora aceita os dois formatos e deriva automaticamente `server_api_url` do esquema e domínio da URL da playlist quando o campo do painel estiver vazio.
 
 SHA-256 desta correção: `a7b460f4fd1f459a6df60744ce774130a4e87c1f0c139537b61c595768dd52ee`.
+
+## Presença online desde a abertura
+
+O heartbeat Rencia não fica mais limitado ao PlayStreamEPGActivity. CategoriesActivity inicia uma presença imediatamente ao abrir os catálogos, consulta `GET https://renciaapp.manus.space/api/v5/heartbeat?mac={MAC}` e repete o envio a cada 60 segundos enquanto a tela permanece ativa. O ciclo é cancelado em `onDestroy`; o player continua mantendo seu próprio ciclo de heartbeat, notificações e comandos.
+
+A build com esta alteração foi assinada e validada com os esquemas v1, v2 e v3. SHA-256: `399ae04a4542ecf2d06139b60609917864de9f1927404e30bc80c9a1e6549cf1`.
