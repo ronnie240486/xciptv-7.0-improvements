@@ -50,3 +50,11 @@ A APK `build_evolux_rencia_final/signed/evolux-aligned-signed.apk` foi recompila
 Antes de instalar, desinstale a versão anterior do Evolux, pois a keystore de desenvolvimento desta distribuição pode não coincidir com a assinatura instalada anteriormente. Depois, instale `dist/evolux-7.0-dev.apk`, copie o MAC apresentado pelo aplicativo e vincule-o no painel especificamente ao identificador de aplicativo `evolux`. Não basta liberar o MAC em outro aplicativo, como `maximus` ou `ouropro`: se a resposta retornar outro `app_id`, o APK bloqueará o acesso por associação incorreta. Após a vinculação, reabra o aplicativo; a autorização deve ser reconhecida automaticamente, sem pressionar Refresh.
 
 > Esta distribuição continua sendo uma build de desenvolvimento derivada de bytecode decompilado. O artefato está funcionalmente compilado e assinado, mas o teste final com aparelho físico, MAC real, playlists reais e comandos emitidos pelo painel continua sendo obrigatório antes de uso em produção.
+
+## Correção do reconhecimento automático MAC
+
+Nesta revisão, o LoginActivity consulta `GET https://renciaapp.manus.space/api/v5/apps/evolux/config?mac={MAC}` imediatamente ao iniciar e repete a consulta a cada **5 segundos**. O MAC é convertido para maiúsculas antes do envio. O ciclo evita requisições simultâneas, permanece silencioso enquanto o aparelho ainda não está autorizado e é cancelado assim que a resposta válida com `allowed=true` e `app_id=evolux` é recebida.
+
+Após a autorização, o APK salva a configuração recebida, interrompe o polling e abre `CategoriesActivity` automaticamente. O usuário não precisa pressionar Refresh. O fluxo também ganhou uma barreira adicional em `LoginActivity.c()`, `LoginActivity.p()`, `j5.N` e `j5.S`: quando `login_type=mac`, nenhuma dessas rotinas pode tentar validar ou enviar servidor, username e password como login manual. Os campos `username` e `password` da resposta Rencia continuam sendo usados somente internamente para montar a playlist Xtream quando necessário.
+
+O novo artefato assinado foi gerado em `build_evolux_mac_poll_5s/signed/evolux-aligned-signed.apk`. A assinatura v1/v2/v3 e a integridade ZIP foram verificadas. SHA-256: `de84f8fcee8690225ba36392efbcdc58dc6257677a2f2c75b0956821f03e8474`.
