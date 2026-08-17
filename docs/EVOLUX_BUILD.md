@@ -152,3 +152,9 @@ SHA-256 desta build: `155b34650eed0e36c4028dec0abad9b37974e94c74a9512c70715d000d
 O fluxo MAC chegava a `CategoriesActivity.k()`, que chamava `Methods.p()` com a preferência `timezone` inexistente. `Methods.p()` passava esse valor nulo a `TimeZone.getTimeZone`, causando o crash exibido no aparelho. Agora a rotina usa `GMT-3` quando a preferência estiver nula ou vazia. A build também mantém `whichPanel=xtreamcodes` para reutilizar a atualização de catálogos do fluxo pré-MAC.
 
 SHA-256 desta build: `fd82ccb5d8d1b88d8f4593806ded5758d69bbf7a5add20a5a981daf59f05f027`.
+
+## Correção do VerifyError no callback de catálogo
+
+A build diagnóstica anterior inseriu uma chamada `Toast.makeText` usando o objeto `util.d` como `Context`, causando `VerifyError` no método `util.b.a`. A chamada foi removida; permanece apenas o `Log.d` seguro do tag do catálogo. O fallback de timezone `GMT-3` e o fluxo `whichPanel=xtreamcodes` foram mantidos.
+
+SHA-256 desta build: `375ae89c8be713e930269310ade7c1cddaec6983370c9a550d67135065e499e9`.
