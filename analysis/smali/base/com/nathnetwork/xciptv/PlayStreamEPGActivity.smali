@@ -3795,8 +3795,10 @@
     .line 49
     if-eqz v0, :cond_1
 
-    .line 50
-    .line 51
+    invoke-virtual {v0}, Lorg/videolan/libvlc/MediaPlayer;->getVLCVout()Lorg/videolan/libvlc/interfaces/IVLCVout;
+    move-result-object v1
+    invoke-interface {v1}, Lorg/videolan/libvlc/interfaces/IVLCVout;->detachViews()V
+    invoke-virtual {v0}, Lorg/videolan/libvlc/MediaPlayer;->stop()V
     invoke-virtual {v0}, Lorg/videolan/libvlc/MediaPlayer;->release()V
 
     .line 52
@@ -11390,10 +11392,15 @@
     .line 634
     .line 635
     .line 636
-    :goto_4
+        :goto_4
+    iget-object v0, p0, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->w0:Lg2/I;
+    if-eqz v0, :i_done_play
+    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Lg2/I;->R(Z)V
+    invoke-virtual {v0}, Lg2/f;->g()V
+:i_done_play
     return-void
 .end method
-
 .method public final j()V
     .locals 4
 
@@ -21951,11 +21958,7 @@
     .line 532
     .line 533
     .line 534
-    iget-object v1, v0, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->F1:Lorg/videolan/libvlc/MediaPlayer;
-
-    .line 535
-    .line 536
-    invoke-virtual {v1}, Lorg/videolan/libvlc/MediaPlayer;->pause()V
+    nop
 
     .line 537
     .line 538
@@ -22126,11 +22129,7 @@
     .line 623
     .line 624
     .line 625
-    iget-object v1, v0, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->F1:Lorg/videolan/libvlc/MediaPlayer;
-
-    .line 626
-    .line 627
-    invoke-virtual {v1}, Lorg/videolan/libvlc/MediaPlayer;->pause()V
+    nop
 
     .line 628
     .line 629
@@ -22170,10 +22169,13 @@
     .line 645
     .line 646
     :cond_e
-    :goto_6
+        :goto_6
+    iget-object v1, v0, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->F1:Lorg/videolan/libvlc/MediaPlayer;
+    if-eqz v1, :q_done_play
+    invoke-virtual {v1}, Lorg/videolan/libvlc/MediaPlayer;->play()V
+:q_done_play
     return-void
 .end method
-
 .method public final r(Z)V
     .locals 5
 
