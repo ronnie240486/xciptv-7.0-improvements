@@ -110,3 +110,11 @@ A varredura confirmou que `CategoriesActivity.m(context)` não inicia a tela; el
 O dispatcher `list-vod` permanece corrigido para usar o código 3 de `s5/g`, que grava `vods` e marca `H=true`.
 
 SHA-256 desta build: `70a1a4059fa4b860126303f56a3399295e2a832bbdbaaec670ac267414e22c11`.
+
+## Correção definitiva do código de conclusão de VOD
+
+A auditoria dos seis ramos do callback mostrou que `list-vod` estava usando o índice errado. O código 5 de `s5/g` grava `tv_category`; o código 3 grava categorias de séries; o código correto para a lista de filmes é o código 1, que chama `k5/d.C` para gravar `vods` e posta `s5/f(3)`, marcando a flag `H=true`. O APK agora usa esse código correto.
+
+A transição para CategoriesActivity permanece explícita por Intent após Live TV, sem esperar VOD ou séries para abrir os catálogos.
+
+SHA-256 desta build: `e3fb753e6607b26bf257832f41adc78636897fc7fee3435b7c43761410391194`.
