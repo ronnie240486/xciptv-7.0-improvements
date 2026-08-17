@@ -134,3 +134,9 @@ Para diagnosticar o bloqueio, esta build inicia somente `cat-livetv` e `list-liv
 Esta build serve exclusivamente para confirmar se o fluxo MAC, a lista de canais e a entrada em CategoriesActivity funcionam sem VOD/séries. O carregamento de filmes e séries deverá ser reativado depois que o teste de isolamento confirmar a origem do travamento.
 
 SHA-256 desta build: `f9e90e3ae5258125786b3c0cafcedcfbe44d25e948c50a67d7fc59a0f639f3c5`.
+
+## Build Live TV-only com painéis VOD e SERIES ocultos
+
+A build de isolamento agora não apenas ignora as requisições VOD e séries: os blocos visuais `VOD` e `SERIES` também estão com `visibility="gone"` no layout `activity_update_contents.xml`. Se a APK correta estiver instalada, a tela de atualização exibirá somente Live TV e EPG; não será possível aparecer `VOD — Updating...`.
+
+SHA-256 desta build: `345f186955e2a18630d36f0a3076189d23a1c9d81e77beff77174d6a3a718cf1`.
