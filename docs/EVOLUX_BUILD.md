@@ -126,3 +126,11 @@ Para investigar o bloqueio sem continuar alterando o fluxo às cegas, os arquivo
 A build diagnóstica registra `EVOLUX_REQ` com cada tag e URL iniciados, `EVOLUX_CATALOG`/`EVOLUX_OK` nos callbacks de catálogo, `EVOLUX_FAIL` em falhas de rede e `EVOLUX_VOD_DB` quando a gravação do VOD no banco falhar. A falha de rede também mostra uma Toast com o tag do catálogo. O worker VOD captura exceções do banco e continua para a conclusão da etapa, evitando ocultar o diagnóstico.
 
 SHA-256 desta build: `bb0946b40e54a05ead70e351da321666584a10d269b40324f4dccf77e7f696bf`.
+
+## Build de isolamento Live TV-only
+
+Para diagnosticar o bloqueio, esta build inicia somente `cat-livetv` e `list-livetv`. As requisições `cat-vod`, `cat-series`, `list-vod` e `list-series` são temporariamente ignoradas; as flags correspondentes são marcadas como concluídas e o watchdog segue para a abertura do aplicativo após o Live TV.
+
+Esta build serve exclusivamente para confirmar se o fluxo MAC, a lista de canais e a entrada em CategoriesActivity funcionam sem VOD/séries. O carregamento de filmes e séries deverá ser reativado depois que o teste de isolamento confirmar a origem do travamento.
+
+SHA-256 desta build: `f9e90e3ae5258125786b3c0cafcedcfbe44d25e948c50a67d7fc59a0f639f3c5`.
