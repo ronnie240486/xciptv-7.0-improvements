@@ -19,7 +19,7 @@ Nesta build, foi aplicada a referência estrutural observada no NewVision soment
 | Tipo de chave | RSA 2048 de desenvolvimento |
 | Alias | `evolux` |
 | APK | `dist/evolux-7.0-dev.apk` |
-| SHA-256 | `890ee8f7349fe89f6b8bb9d3f42397c4ac958abcc65744e2fda4bfcf968ce856` |
+| SHA-256 | `1c4129e00ea99a98c036cb84e7eafc48b9c8f75ab2587d44899ae6d463e9349a` |
 | Package | `com.nathnetwork.xciptv` |
 | Nome exibido | `Evolux` |
 
