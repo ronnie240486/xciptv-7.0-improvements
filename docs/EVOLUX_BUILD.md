@@ -198,3 +198,9 @@ SHA-256 desta build: `4c3ca737aa0533d9a3c17fcb1b84c0385c63bf0197090ea99ebe22638a
 A API Xtream respondeu corretamente para o canal A&E FHD em `/live/{username}/{password}/308514.ts`. A tela preta era causada pelo perfil MAC salvo em texto puro no armazenamento global, enquanto `eH.p` descriptografa `ORT_PROFILE_SERVER`, `ORT_PROFILE_USERNAME`, `ORT_PROFILE_PASSWORD` e `ORT_WHICH_PANEL` antes de o player montar a URL. A build agora salva esses quatro campos usando `Encrypt.b()`, mantendo o formato criptografado esperado pelo player.
 
 SHA-256 desta build: `f3da8b2eaa3a628a25669a3cfb1ea03f2d808c4d0df057c33cad8fd68dc85728`.
+
+## Ajuste final do perfil de reprodução
+
+O player usa `eH.p()` para descriptografar `ORT_PROFILE_SERVER`, `ORT_PROFILE_USERNAME` e `ORT_PROFILE_PASSWORD`; esses três campos são salvos com `Encrypt.b()`. Já `ORT_WHICH_PANEL` é comparado diretamente pelo player e permanece como texto puro `xtreamcodes`. Essa separação evita URL inválida e seleção de painel incompatível.
+
+SHA-256 desta build: `944263e8bb37e94aa36971de14c7c486c19ee5f07372be8f16d4872b2c13eeaf`.
