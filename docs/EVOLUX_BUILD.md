@@ -102,3 +102,11 @@ Foi identificado que a tela não dependia apenas de VOD: o callback de `list-vod
 Também foi identificado que concluir Live TV ainda passava por uma conclusão indireta que podia permanecer em EPG/ORT_PROCESS_STATUS. O watchdog agora chama diretamente `CategoriesActivity.m(context)` assim que `G=true` e finaliza `XCUpdateContents`; VOD e séries continuam em segundo plano.
 
 SHA-256 desta build: `5dc591b7c7d846825ba4f72bdfd1f2848081a9e20d905cb13c39310a3fd682d6`.
+
+## Correção da transição real para os catálogos
+
+A varredura confirmou que `CategoriesActivity.m(context)` não inicia a tela; ele apenas grava `ORT_WHICH_PANEL`. A correção anterior chamava esse método e finalizava `XCUpdateContents`, mas não havia uma Intent explícita para abrir os catálogos. Agora, quando Live TV conclui, o APK preserva a preferência, cria `Intent(context, CategoriesActivity.class)`, chama `startActivity()` e só então finaliza a tela de atualização.
+
+O dispatcher `list-vod` permanece corrigido para usar o código 3 de `s5/g`, que grava `vods` e marca `H=true`.
+
+SHA-256 desta build: `70a1a4059fa4b860126303f56a3399295e2a832bbdbaaec670ac267414e22c11`.
