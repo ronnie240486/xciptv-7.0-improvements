@@ -1435,6 +1435,21 @@
     const/4 v4, 0x1
     if-ne v0, v4, :evolux_vod_legacy
 
+    const-string v9, "ORT_WHICH_CAT"
+    const-string v8, ""
+    invoke-static {}, Lcom/google/android/gms/internal/ads/Cv;->M()Lu5/a;
+    move-result-object v5
+    invoke-virtual {v5, v9, v8}, Lu5/a;->c(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v8
+    const-string v9, "VOD"
+    invoke-static {v8, v9}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result v5
+    if-nez v5, :evolux_vod_direct_candidate
+    const-string v9, "SERIES"
+    invoke-static {v8, v9}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result v5
+    if-eqz v5, :evolux_vod_legacy
+:evolux_vod_direct_candidate
     iget-object v3, p0, Lj5/n1;->b:Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;
     iget-object v4, v3, Lcom/nathnetwork/xciptv/PlayStreamEPGActivity;->C:Ljava/lang/String;
     if-eqz v4, :evolux_vod_legacy
