@@ -178,3 +178,11 @@ SHA-256 desta build: `dbe2257013a8e972bd61653a349e94065391cd9d5972088ec7efac648a
 O heartbeat de `CategoriesActivity` estava lendo `mac` de `u5/a`, enquanto o login MAC salvava o identificador em `SharedPreferences`. Como resultado, a rotina não encontrava MAC e não enviava presença ao painel. Agora `sendPresence()` lê a chave `mac` de `CategoriesActivity.y`, normaliza para maiúsculas e envia a rota Rencia a cada 60 segundos. O fluxo de Live TV, VOD e séries não foi alterado.
 
 SHA-256 desta build: `0ccc1ffe8223ec2024bb1770035ae484ec4064c964d6125d178d7e7fdfa2269e`.
+
+## Perfil do player, conteúdo assistido e heartbeat
+
+O callback MAC agora copia `ORT_PROFILE_SERVER`, `ORT_PROFILE_USERNAME`, `ORT_PROFILE_PASSWORD` e `ORT_WHICH_PANEL=xtreamcodes` para o armazenamento global usado pelos handlers de canais e pelo player. Isso evita que o catálogo carregue usando um perfil, enquanto o player tenta montar a URL com credenciais vazias ou antigas.
+
+O heartbeat do player passou a ler o MAC persistido e a enviar `current_content` com o título atual (`A`) codificado na URL, conforme o PDF. O envio ocorre ao abrir/trocar o conteúdo e no ciclo de 60 segundos. O reporte de falha nativa também passa a usar o MAC persistido.
+
+SHA-256 desta build: `e850e577e1eac99dfe894ee67b6b59ab6f55bb792eb6e003a0efa8bca8ed28b5`.
