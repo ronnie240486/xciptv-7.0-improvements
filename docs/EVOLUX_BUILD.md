@@ -70,3 +70,11 @@ SHA-256 desta correção: `a7b460f4fd1f459a6df60744ce774130a4e87c1f0c139537b61c5
 O heartbeat Rencia não fica mais limitado ao PlayStreamEPGActivity. CategoriesActivity inicia uma presença imediatamente ao abrir os catálogos, consulta `GET https://renciaapp.manus.space/api/v5/heartbeat?mac={MAC}` e repete o envio a cada 60 segundos enquanto a tela permanece ativa. O ciclo é cancelado em `onDestroy`; o player continua mantendo seu próprio ciclo de heartbeat, notificações e comandos.
 
 A build com esta alteração foi assinada e validada com os esquemas v1, v2 e v3. SHA-256: `399ae04a4542ecf2d06139b60609917864de9f1927404e30bc80c9a1e6549cf1`.
+
+## Correção final de presença e VOD
+
+Foi corrigido o hook de presença em `CategoriesActivity`: o início do heartbeat agora usa a referência real da Activity no fim do `onCreate`, sem depender de um registrador local que podia ter sido reutilizado. O APK envia o heartbeat imediatamente ao abrir os catálogos e continua a cada 60 segundos.
+
+Também foi corrigido o dispatcher de sucesso de `list-vod`. O callback estava encaminhando a resposta para o código de séries; por isso os filmes podiam ser processados sem postar a conclusão da flag `H`, deixando a tela presa em `Updating...`. O callback agora usa o ramo VOD correto, que grava `vods` e executa `s5/f(4)` para marcar VOD como concluído.
+
+SHA-256 da build: `c2a37336ba6a5ee76e88cf11e9ed7e1e1e32224b1519273317a213800181b3e6`.
