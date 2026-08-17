@@ -212,3 +212,9 @@ Os métodos de abertura inicial e troca de canal consultavam `streamFormat` com 
 A keystore de desenvolvimento precisou ser recriada após o reset do ambiente. Esta APK exige instalação limpa.
 
 SHA-256 desta build: `8acf8f12ab7e43000fb6207ee15a1a5ab2a386c3040f7006e5d474aafe976d73`.
+
+## Stable device identifier
+
+This build derives the Evolux panel identifier from Android Settings.Secure.ANDROID_ID when the app MAC preference is empty. It formats the last 12 hexadecimal characters as six uppercase pairs separated by hyphens and stores the result in the app MAC preference. Configuration polling, category heartbeat, player heartbeat, current-content reporting, and playback-failure reporting use the same persisted identifier. This identifier is stable across ordinary app uninstall/reinstall on the same Android TV Box, subject to Android factory reset, user/profile changes, or device firmware behavior. The new identifier must be registered once in the Rencia panel under app_id=evolux.
+
+Final APK SHA-256: `32a059c956d6448646077eabe3f64c38c7f9ff0f41d101aa1cc1f545a41c77da`.
