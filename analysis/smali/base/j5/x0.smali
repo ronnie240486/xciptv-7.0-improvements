@@ -305,7 +305,7 @@
 
     .line 136
     .line 137
-    const/4 v10, 0x0
+    const-string v10, "ts"
 
     .line 138
     invoke-interface {v3, v9, v10}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

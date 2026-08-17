@@ -10761,6 +10761,9 @@
     .line 326
     invoke-virtual {p1}, Lg2/I;->J()V
 
+    const/4 v0, 0x1
+    invoke-virtual {p1, v0}, Lg2/I;->R(Z)V
+
     .line 327
     .line 328
     .line 329
