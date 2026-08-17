@@ -146,3 +146,9 @@ SHA-256 desta build: `345f186955e2a18630d36f0a3076189d23a1c9d81e77beff77174d6a3a
 O callback MAC estava salvando `whichPanel=ezserver`, fazendo a playlist Xtream autorizada abrir `EZServerUpdateContents`, diferente do fluxo manual que usava `XCUpdateContents`. A correção mantém a autenticação MAC e grava `whichPanel=xtreamcodes`, reutilizando a mesma rotina pré-MAC de atualização de catálogos.
 
 SHA-256 desta build: `155b34650eed0e36c4028dec0abad9b37974e94c74a9512c70715d000d0f4832`.
+
+## Correção do crash `TimeZone id == null`
+
+O fluxo MAC chegava a `CategoriesActivity.k()`, que chamava `Methods.p()` com a preferência `timezone` inexistente. `Methods.p()` passava esse valor nulo a `TimeZone.getTimeZone`, causando o crash exibido no aparelho. Agora a rotina usa `GMT-3` quando a preferência estiver nula ou vazia. A build também mantém `whichPanel=xtreamcodes` para reutilizar a atualização de catálogos do fluxo pré-MAC.
+
+SHA-256 desta build: `fd82ccb5d8d1b88d8f4593806ded5758d69bbf7a5add20a5a981daf59f05f027`.
