@@ -118,3 +118,11 @@ A auditoria dos seis ramos do callback mostrou que `list-vod` estava usando o í
 A transição para CategoriesActivity permanece explícita por Intent após Live TV, sem esperar VOD ou séries para abrir os catálogos.
 
 SHA-256 desta build: `e3fb753e6607b26bf257832f41adc78636897fc7fee3435b7c43761410391194`.
+
+## Build diagnóstica: restauração do fluxo VOD anterior
+
+Para investigar o bloqueio sem continuar alterando o fluxo às cegas, os arquivos de catálogo foram restaurados da árvore `reconstructed_full`, que precede a integração MAC e carregava VOD corretamente. Foram removidas as alterações experimentais de filtro de categoria, watchdog e transição indireta.
+
+A build diagnóstica registra `EVOLUX_REQ` com cada tag e URL iniciados, `EVOLUX_CATALOG`/`EVOLUX_OK` nos callbacks de catálogo, `EVOLUX_FAIL` em falhas de rede e `EVOLUX_VOD_DB` quando a gravação do VOD no banco falhar. A falha de rede também mostra uma Toast com o tag do catálogo. O worker VOD captura exceções do banco e continua para a conclusão da etapa, evitando ocultar o diagnóstico.
+
+SHA-256 desta build: `bb0946b40e54a05ead70e351da321666584a10d269b40324f4dccf77e7f696bf`.
