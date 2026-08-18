@@ -284,3 +284,9 @@ SHA-256 da build: `522284b0dbc46006f8b9140d7ef7b2410915287f678fae1bc570a89c45dad
 A build restaura o inicializador original de `Config`, que usa o método nativo da biblioteca de rede para preencher `Config.a`, e restaura a tela de ativação para ler a preferência `mac` como no sistema anterior. Foram removidas as tentativas recentes de leitura direta de `eth0`, `wlan0`, `wifi0` e `en0`. O fluxo Rencia, o polling e os catálogos permanecem na base atual.
 
 SHA-256 da build: `624255723f1f0d8befaa4f2aa5ed9ab4429bad40ac2858afc67c9654904d7008`
+
+## MAC visual com dois-pontos e envio ao painel com hífens
+
+A implementação antiga de rede foi preservada. A tela exibe o endereço em `XX:XX:XX:XX:XX:XX`, como `70:EE:BC:C8:2E:F8`, enquanto o pedido à rota Evolux do Rencia converte somente o valor enviado para `XX-XX-XX-XX-XX-XX`, como `70-EE-BC-C8-2E-F8`.
+
+SHA-256 da build: `1007b3092ba921f536af18d8ebf1c99750b160b3278d6e58efe1d89b3f4547d3`
