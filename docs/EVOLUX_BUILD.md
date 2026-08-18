@@ -230,3 +230,10 @@ Final APK SHA-256: `f44e68e4e292e6a57ec9fb55bb84b18cf4efdfae71a02898fe37a863395f
 This build keeps the pre-regression MAC-only login and catalog/player behavior. Before the Evolux configuration request, it synchronizes the current device identifier from `Config.a` into the `mac` preference, normalizing separators to hyphens, so a stale identifier left by a previous build cannot cause `Server configuration unavailable`. It does not force user/password login and does not change VOD, series, heartbeat, or player logic.
 
 Final APK SHA-256: `79059483a438b0b7754817a2b056b1cca6946979e6b0f27bfa6aa70e139f55a1`.
+
+## Frozen baseline: Live TV-only change
+
+This release is based directly on the last pre-regression APK where MAC/Rencia authorization, panel presence, VOD, and series were working. No LoginActivity, MAC identifier, Rencia configuration, heartbeat, VOD, series, or catalog code was changed. The only source change is in `j5/x0.a(I)`, the Live TV click path: it bypasses `direct_source` and uses the authenticated Xtream URL construction before calling the existing ExoPlayer/VLC methods.
+
+Reference baseline SHA-256: `944263e8bb37e94aa36971de14c7c486c19ee5f07372be8f16d4872b2c13eeaf`.
+Final APK SHA-256: `88ba730f459689671891f0ef554b5fd2c2d76d7d1dd893e1253330a7415c80ee`.
