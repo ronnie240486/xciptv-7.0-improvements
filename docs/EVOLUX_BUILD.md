@@ -254,3 +254,11 @@ Final APK SHA-256: `c8a72c8c1985187bd160edb295f54d80be1e47217f270d22e8ca49d6e64a
 A build restaura no clique principal de canais o comportamento nativo de seleção de fonte: quando o item fornece `direct_source`, o player usa essa URL; quando o campo está vazio ou contém `null`, o APK monta a URL Xtream autenticada com o servidor, usuário, senha, `stream_id` e extensão `streamFormat` (padrão `ts`).
 
 O fluxo MAC/Rencia, `whichPanel=xtreamcodes`, heartbeat, VOD e séries não foi alterado nesta revisão.
+
+## Correção do identificador MAC exibido
+
+A tela de ativação não usa mais o identificador nativo que aparecia como UUID. `Config.lkfj()` agora lê o endereço físico da interface de rede da TV Box (`/sys/class/net/eth0/address`, com fallback para `wlan0`) e o retorna em maiúsculas no formato `XX:XX:XX:XX:XX:XX`. O mesmo valor é salvo na preferência `mac`, exibido no TextView da tela de ativação e enviado à rota Evolux do Rencia.
+
+A assinatura permanece com a mesma keystore Evolux, permitindo instalação por cima da versão anterior assinada com a mesma chave.
+
+SHA-256: `$(cut -d' ' -f1 /tmp/evolux_physical_mac_sha256.txt)`
