@@ -290,3 +290,9 @@ SHA-256 da build: `624255723f1f0d8befaa4f2aa5ed9ab4429bad40ac2858afc67c9654904d7
 A implementação antiga de rede foi preservada. A tela exibe o endereço em `XX:XX:XX:XX:XX:XX`, como `70:EE:BC:C8:2E:F8`, enquanto o pedido à rota Evolux do Rencia converte somente o valor enviado para `XX-XX-XX-XX-XX-XX`, como `70-EE-BC-C8-2E-F8`.
 
 SHA-256 da build: `1007b3092ba921f536af18d8ebf1c99750b160b3278d6e58efe1d89b3f4547d3`
+
+## Refresh e reconhecimento automático restaurados
+
+O botão exibido como `Refresh` agora limpa os estados de autorização/consulta e chama o mesmo ciclo de polling do MAC imediatamente. O `AutoMacPoll` também limpa estados presos e agenda nova consulta a cada 5 segundos. A origem antiga da rede e o MAC visual com dois-pontos foram preservados; somente o valor enviado ao painel continua sendo normalizado para hífens.
+
+SHA-256 da build: `81cfc761cae53bcdc9879bb26d484c5253720844e6e910681ecdc58c9ef7598f`
