@@ -256,15 +256,13 @@ A build restaura no clique principal de canais o comportamento nativo de seleç�
 O fluxo MAC/Rencia, `whichPanel=xtreamcodes`, heartbeat, VOD e séries não foi alterado nesta revisão.
 
 ## Correção do identificador MAC exibido
-
-A tela de ativação não usa mais o identificador nativo que aparecia como UUID. `Config.lkfj()` agora lê o endereço físico da interface de rede da TV Box (`/sys/class/net/eth0/address`, com fallback para `wlan0`) e o retorna em maiúsculas no formato `XX:XX:XX:XX:XX:XX`. O mesmo valor é salvo na preferência `mac`, exibido no TextView da tela de ativação e enviado à rota Evolux do Rencia.
+A tela de ativação não usa mais o identificador nativo que aparecia como UUID. O inicializador de `Config` lê o endereço físico da interface de rede da TV Box (`/sys/class/net/eth0/address`, com fallback para `wlan0`) e grava o resultado em `Config.a` no formato `XX:XX:XX:XX:XX:XX`. O LoginActivity exibe e envia esse mesmo valor à rota Evolux do Rencia.
 
 A assinatura permanece com a mesma keystore Evolux, permitindo instalação por cima da versão anterior assinada com a mesma chave.
 
-SHA-256: `$(cut -d' ' -f1 /tmp/evolux_physical_mac_sha256.txt)`
+SHA-256 da build: `121ca2c5ec18b8a50da2d9838b52cb0f10653829ea75fdbec8dd5c364d86f17e`
 
-## Correção do crash 
+## Correção do crash `Config.askfj()`
+A build intermediária do ajuste de MAC removeu acidentalmente declarações nativas usadas pelo `JNI_OnLoad`, causando `NoSuchMethodError` para `Config.askfj()` durante a inicialização. Esta revisão restaura integralmente `askfj()`, `bifj()`, `AgetnKeyFromJNI()` e as demais assinaturas nativas originais. O MAC físico é aplicado em `Config.a` durante o inicializador da classe, e o LoginActivity usa esse campo para exibição e consulta Rencia.
 
-A build intermediária do ajuste de MAC removeu acidentalmente declarações nativas usadas pelo , causando  para  durante a inicialização. Esta revisão restaura integralmente , ,  e as demais assinaturas nativas originais. O MAC físico é aplicado em  durante o inicializador da classe, e o LoginActivity usa esse campo para exibição e consulta Rencia.
-
-SHA-256 da build final: \m`121ca2c5ec18b8a50da2d9838b52cb0f10653829ea75fdbec8dd5c364d86f17e`
+SHA-256 da build final: `121ca2c5ec18b8a50da2d9838b52cb0f10653829ea75fdbec8dd5c364d86f17e`
