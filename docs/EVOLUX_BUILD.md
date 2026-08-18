@@ -262,3 +262,9 @@ A tela de ativação não usa mais o identificador nativo que aparecia como UUID
 A assinatura permanece com a mesma keystore Evolux, permitindo instalação por cima da versão anterior assinada com a mesma chave.
 
 SHA-256: `$(cut -d' ' -f1 /tmp/evolux_physical_mac_sha256.txt)`
+
+## Correção do crash 
+
+A build intermediária do ajuste de MAC removeu acidentalmente declarações nativas usadas pelo , causando  para  durante a inicialização. Esta revisão restaura integralmente , ,  e as demais assinaturas nativas originais. O MAC físico é aplicado em  durante o inicializador da classe, e o LoginActivity usa esse campo para exibição e consulta Rencia.
+
+SHA-256 da build final: \m`121ca2c5ec18b8a50da2d9838b52cb0f10653829ea75fdbec8dd5c364d86f17e`
