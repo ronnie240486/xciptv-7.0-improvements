@@ -243,3 +243,9 @@ Final APK SHA-256: `88ba730f459689671891f0ef554b5fd2c2d76d7d1dd893e1253330a7415c
 Base: user-identified functional Evolux APK SHA-256 `944263e8bb37e94aa36971de14c7c486c19ee5f07372be8f16d4872b2c13eeaf`. MAC/Rencia, panel presence, VOD, series, login, identifier, and catalog code are unchanged. The only code change is in the Live TV click handler `j5/x0.a(I)`: it bypasses the `direct_source` branch and jumps into the existing authenticated Xtream URL construction before the existing ExoPlayer/VLC path.
 
 Final APK SHA-256: `5a793f0d7a9093474c51d58f87c798d1b2a4994fd189f3d2b80bd086628b414f`.
+
+## Exact attached 944 base: MAC-colon and Live TV player fix
+
+Base is exactly the user-attached APK SHA-256 `944263e8bb37e94aa36971de14c7c486c19ee5f07372be8f16d4872b2c13eeaf`. The original native `Config.a` MAC is preserved with colon separators and is written before the Rencia config request. UUID/ANDROID_ID is not used for the Evolux MAC flow. The only playback change is the Live TV click path: bypass `direct_source`, use the authenticated Xtream URL block, and default the Live TV extension to `ts`. VOD, series, catalog loading, and the rest of MAC/Rencia are unchanged.
+
+Final APK SHA-256: `c8a72c8c1985187bd160edb295f54d80be1e47217f270d22e8ca49d6e64a1c24`.
