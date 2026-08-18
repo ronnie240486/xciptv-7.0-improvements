@@ -296,3 +296,9 @@ SHA-256 da build: `1007b3092ba921f536af18d8ebf1c99750b160b3278d6e58efe1d89b3f454
 O botão exibido como `Refresh` agora limpa os estados de autorização/consulta e chama o mesmo ciclo de polling do MAC imediatamente. O `AutoMacPoll` também limpa estados presos e agenda nova consulta a cada 5 segundos. A origem antiga da rede e o MAC visual com dois-pontos foram preservados; somente o valor enviado ao painel continua sendo normalizado para hífens.
 
 SHA-256 da build: `81cfc761cae53bcdc9879bb26d484c5253720844e6e910681ecdc58c9ef7598f`
+
+## Base correta do MAC de rede com polling e Refresh
+
+Esta build mantém o método `r()` da referência que exibiu o MAC de rede correto, como `70:EE:BC:C8:2E:F8`, lendo a preferência persistida e enviando hífens somente na consulta Rencia. O botão `Refresh` reinicia a consulta imediatamente, e `AutoMacPoll` repete a tentativa a cada 5 segundos. O `Config.lkfj()` não foi usado para sobrescrever o MAC visual.
+
+SHA-256 da build: `19628f4f3f4a6e55eebdacf87e5bef87c9c07449977459695bacbad1e13083ff`
