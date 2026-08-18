@@ -237,3 +237,9 @@ This release is based directly on the last pre-regression APK where MAC/Rencia a
 
 Reference baseline SHA-256: `944263e8bb37e94aa36971de14c7c486c19ee5f07372be8f16d4872b2c13eeaf`.
 Final APK SHA-256: `88ba730f459689671891f0ef554b5fd2c2d76d7d1dd893e1253330a7415c80ee`.
+
+## Final original-944 Live TV-only fix
+
+Base: user-identified functional Evolux APK SHA-256 `944263e8bb37e94aa36971de14c7c486c19ee5f07372be8f16d4872b2c13eeaf`. MAC/Rencia, panel presence, VOD, series, login, identifier, and catalog code are unchanged. The only code change is in the Live TV click handler `j5/x0.a(I)`: it bypasses the `direct_source` branch and jumps into the existing authenticated Xtream URL construction before the existing ExoPlayer/VLC path.
+
+Final APK SHA-256: `5a793f0d7a9093474c51d58f87c798d1b2a4994fd189f3d2b80bd086628b414f`.
