@@ -266,3 +266,9 @@ SHA-256 da build: `121ca2c5ec18b8a50da2d9838b52cb0f10653829ea75fdbec8dd5c364d86f
 A build intermediária do ajuste de MAC removeu acidentalmente declarações nativas usadas pelo `JNI_OnLoad`, causando `NoSuchMethodError` para `Config.askfj()` durante a inicialização. Esta revisão restaura integralmente `askfj()`, `bifj()`, `AgetnKeyFromJNI()` e as demais assinaturas nativas originais. O MAC físico é aplicado em `Config.a` durante o inicializador da classe, e o LoginActivity usa esse campo para exibição e consulta Rencia.
 
 SHA-256 da build final: `121ca2c5ec18b8a50da2d9838b52cb0f10653829ea75fdbec8dd5c364d86f17e`
+
+## Correção do VerifyError no LoginActivity
+
+O bloco que exibe o MAC reutilizava `v6` como valor padrão para e-mail e telefone de suporte, mas a substituição anterior havia removido a inicialização desse registrador. O bytecode agora inicializa `v6` explicitamente como `String` antes desses usos. O MAC físico, as assinaturas nativas e o fluxo Rencia permanecem preservados.
+
+SHA-256 da build: `479a0874e4bd8a209bf8382be6990a0f85832ca3e6561faaec74b21f35fd9739`
