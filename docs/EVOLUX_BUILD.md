@@ -272,3 +272,9 @@ SHA-256 da build final: `121ca2c5ec18b8a50da2d9838b52cb0f10653829ea75fdbec8dd5c3
 O bloco que exibe o MAC reutilizava `v6` como valor padrão para e-mail e telefone de suporte, mas a substituição anterior havia removido a inicialização desse registrador. O bytecode agora inicializa `v6` explicitamente como `String` antes desses usos. O MAC físico, as assinaturas nativas e o fluxo Rencia permanecem preservados.
 
 SHA-256 da build: `479a0874e4bd8a209bf8382be6990a0f85832ca3e6561faaec74b21f35fd9739`
+
+## Correção final da origem do MAC
+
+O retorno do `Config.lkfj()` nativo não é mais usado como valor de `Config.a`, pois no aparelho do usuário ele era um UUID. A build tenta exclusivamente os endereços físicos de `eth0`, `wlan0`, `wifi0` e `en0`, normalizando o resultado para maiúsculas. Se o sistema Android bloquear todas essas interfaces, o APK não reutiliza o UUID como fallback.
+
+SHA-256 da build: `522284b0dbc46006f8b9140d7ef7b2410915287f678fae1bc570a89c45dad880`
